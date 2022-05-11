@@ -30,7 +30,7 @@
                                     CurrentStoryboardKey="{Binding ElementName=AnimationSelector, Path=Text}"
                                     Grid.ColumnSpan="2" />
 
-        <Button Content="画面遷移" 
+        <Button Content="Navigate" 
                 Command="{Binding NavigateCmd}" 
                 IsEnabled="{Binding ElementName=ContentRegion, Path=IsAnimationCompleted}" 
                 Grid.Column="0" Grid.Row="1" Margin="5" />
