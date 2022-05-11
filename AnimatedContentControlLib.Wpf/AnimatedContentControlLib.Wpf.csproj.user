@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Page Update="ResourceDictionarys\AnimatedContentControl\ModernSlideinAnimations.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ResourceDictionarys\AnimatedContentControl\SlideinAnimations.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\AnimatedContentControl\MobileImageStyles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\AnimatedContentControl\AnimatedContentControlStyles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\AnimatedContentControl\MobileContentPresenterStyles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
