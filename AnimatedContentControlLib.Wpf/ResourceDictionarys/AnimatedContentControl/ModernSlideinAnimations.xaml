@@ -2,10 +2,8 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:ctl="clr-namespace:AnimatedContentControlLib.Wpf.Controls">
 
-    <!--#region 右方向モダンスライドインアニメーション-->
     <Storyboard x:Key="ModernSlideinRightAnimation">
 
-        <!--#region 新コンテンツの位置アニメーション-->
         <DoubleAnimationUsingKeyFrames BeginTime="0:0:0"
                                        Storyboard.TargetName="PrimaryContent"
                                        Storyboard.TargetProperty="(ctl:MobileContentPresenter.XPosFromWidthRethio)"
@@ -19,9 +17,7 @@
                 </EasingDoubleKeyFrame.EasingFunction>
             </EasingDoubleKeyFrame>
         </DoubleAnimationUsingKeyFrames>
-        <!--#endregion-->
 
-        <!--#region 旧コンテンツの位置アニメーション-->
         <DoubleAnimationUsingKeyFrames BeginTime="0:0:0"
                                        Storyboard.TargetName="SecondaryImage"
                                        Storyboard.TargetProperty="(ctl:MobileImage.XPosFromWidthRethio)"
@@ -35,9 +31,7 @@
             </EasingDoubleKeyFrame>
             <DiscreteDoubleKeyFrame KeyTime="0:0:0.4" Value="0.2" />
         </DoubleAnimationUsingKeyFrames>
-        <!--#endregion-->
 
-        <!--#region 新コンテンツの透過度アニメーション-->
         <DoubleAnimationUsingKeyFrames BeginTime="0:0:0"
                                        Storyboard.TargetName="PrimaryContent"
                                        Storyboard.TargetProperty="(UIElement.Opacity)"
@@ -51,9 +45,7 @@
                 </EasingDoubleKeyFrame.EasingFunction>
             </EasingDoubleKeyFrame>
         </DoubleAnimationUsingKeyFrames>
-        <!--#endregion-->
 
-        <!--#region 旧コンテンツの透過度アニメーション-->
         <DoubleAnimationUsingKeyFrames BeginTime="0:0:0"
                                        Storyboard.TargetName="SecondaryImage"
                                        Storyboard.TargetProperty="(UIElement.Opacity)"
@@ -67,15 +59,11 @@
             </EasingDoubleKeyFrame>
             <DiscreteDoubleKeyFrame KeyTime="0:0:0.4" Value="0" />
         </DoubleAnimationUsingKeyFrames>
-        <!--#endregion-->
 
     </Storyboard>
-    <!--#endregion-->
 
-    <!--#region 左方向モダンスライドインアニメーション-->
     <Storyboard x:Key="ModernSlideinLeftAnimation">
 
-        <!--#region 新コンテンツの位置アニメーション-->
         <DoubleAnimationUsingKeyFrames BeginTime="0:0:0"
                                        Storyboard.TargetName="PrimaryContent"
                                        Storyboard.TargetProperty="(ctl:MobileContentPresenter.XPosFromWidthRethio)"
@@ -89,9 +77,7 @@
                 </EasingDoubleKeyFrame.EasingFunction>
             </EasingDoubleKeyFrame>
         </DoubleAnimationUsingKeyFrames>
-        <!--#endregion-->
 
-        <!--#region 旧コンテンツの位置アニメーション-->
         <DoubleAnimationUsingKeyFrames BeginTime="0:0:0"
                                        Storyboard.TargetName="SecondaryImage"
                                        Storyboard.TargetProperty="(ctl:MobileImage.XPosFromWidthRethio)"
@@ -105,9 +91,7 @@
             </EasingDoubleKeyFrame>
             <DiscreteDoubleKeyFrame KeyTime="0:0:0.4" Value="-0.2" />
         </DoubleAnimationUsingKeyFrames>
-        <!--#endregion-->
 
-        <!--#region 新コンテンツの透過度アニメーション-->
         <DoubleAnimationUsingKeyFrames BeginTime="0:0:0"
                                        Storyboard.TargetName="PrimaryContent"
                                        Storyboard.TargetProperty="(UIElement.Opacity)"
@@ -121,9 +105,7 @@
                 </EasingDoubleKeyFrame.EasingFunction>
             </EasingDoubleKeyFrame>
         </DoubleAnimationUsingKeyFrames>
-        <!--#endregion-->
 
-        <!--#region 旧コンテンツの透過度アニメーション-->
         <DoubleAnimationUsingKeyFrames BeginTime="0:0:0"
                                        Storyboard.TargetName="SecondaryImage"
                                        Storyboard.TargetProperty="(UIElement.Opacity)"
@@ -137,14 +119,10 @@
             </EasingDoubleKeyFrame>
             <DiscreteDoubleKeyFrame KeyTime="0:0:0.4" Value="0" />
         </DoubleAnimationUsingKeyFrames>
-        <!--#endregion-->
     </Storyboard>
-    <!--#endregion-->
 
-    <!--#region 上方向モダンスライドインアニメーション-->
     <Storyboard x:Key="ModernSlideinUpAnimation">
 
-        <!--#region 新コンテンツの位置アニメーション-->
         <DoubleAnimationUsingKeyFrames BeginTime="0:0:0"
                                        Storyboard.TargetName="PrimaryContent"
                                        Storyboard.TargetProperty="(ctl:MobileContentPresenter.YPosFromHeightRethio)"
@@ -158,9 +136,7 @@
                 </EasingDoubleKeyFrame.EasingFunction>
             </EasingDoubleKeyFrame>
         </DoubleAnimationUsingKeyFrames>
-        <!--#endregion-->
 
-        <!--#region 旧コンテンツの位置アニメーション-->
         <DoubleAnimationUsingKeyFrames BeginTime="0:0:0"
                                        Storyboard.TargetName="SecondaryImage"
                                        Storyboard.TargetProperty="(ctl:MobileImage.YPosFromHeightRethio)"
@@ -174,9 +150,7 @@
             </EasingDoubleKeyFrame>
             <DiscreteDoubleKeyFrame KeyTime="0:0:0.4" Value="-0.2" />
         </DoubleAnimationUsingKeyFrames>
-        <!--#endregion-->
 
-        <!--#region 新コンテンツの透過度アニメーション-->
         <DoubleAnimationUsingKeyFrames BeginTime="0:0:0"
                                        Storyboard.TargetName="PrimaryContent"
                                        Storyboard.TargetProperty="(UIElement.Opacity)"
@@ -190,9 +164,7 @@
                 </EasingDoubleKeyFrame.EasingFunction>
             </EasingDoubleKeyFrame>
         </DoubleAnimationUsingKeyFrames>
-        <!--#endregion-->
 
-        <!--#region 旧コンテンツの透過度アニメーション-->
         <DoubleAnimationUsingKeyFrames BeginTime="0:0:0"
                                        Storyboard.TargetName="SecondaryImage"
                                        Storyboard.TargetProperty="(UIElement.Opacity)"
@@ -206,15 +178,11 @@
             </EasingDoubleKeyFrame>
             <DiscreteDoubleKeyFrame KeyTime="0:0:0.4" Value="0" />
         </DoubleAnimationUsingKeyFrames>
-        <!--#endregion-->
 
     </Storyboard>
-    <!--#endregion-->
 
-    <!--#region 下方向モダンスライドインアニメーション-->
     <Storyboard x:Key="ModernSlideinDownAnimation">
 
-        <!--#region 新コンテンツの位置アニメーション-->
         <DoubleAnimationUsingKeyFrames BeginTime="0:0:0"
                                        Storyboard.TargetName="PrimaryContent"
                                        Storyboard.TargetProperty="(ctl:MobileContentPresenter.YPosFromHeightRethio)"
@@ -228,9 +196,7 @@
                 </EasingDoubleKeyFrame.EasingFunction>
             </EasingDoubleKeyFrame>
         </DoubleAnimationUsingKeyFrames>
-        <!--#endregion-->
 
-        <!--#region 旧コンテンツの位置アニメーション-->
         <DoubleAnimationUsingKeyFrames BeginTime="0:0:0"
                                        Storyboard.TargetName="SecondaryImage"
                                        Storyboard.TargetProperty="(ctl:MobileImage.YPosFromHeightRethio)"
@@ -244,9 +210,7 @@
             </EasingDoubleKeyFrame>
             <DiscreteDoubleKeyFrame KeyTime="0:0:0.4" Value="0.2" />
         </DoubleAnimationUsingKeyFrames>
-        <!--#endregion-->
 
-        <!--#region 新コンテンツの透過度アニメーション-->
         <DoubleAnimationUsingKeyFrames BeginTime="0:0:0"
                                        Storyboard.TargetName="PrimaryContent"
                                        Storyboard.TargetProperty="(UIElement.Opacity)"
@@ -260,9 +224,7 @@
                 </EasingDoubleKeyFrame.EasingFunction>
             </EasingDoubleKeyFrame>
         </DoubleAnimationUsingKeyFrames>
-        <!--#endregion-->
 
-        <!--#region 旧コンテンツの透過度アニメーション-->
         <DoubleAnimationUsingKeyFrames BeginTime="0:0:0"
                                        Storyboard.TargetName="SecondaryImage"
                                        Storyboard.TargetProperty="(UIElement.Opacity)"
@@ -276,8 +238,6 @@
             </EasingDoubleKeyFrame>
             <DiscreteDoubleKeyFrame KeyTime="0:0:0.4" Value="0" />
         </DoubleAnimationUsingKeyFrames>
-        <!--#endregion-->
 
     </Storyboard>
-    <!--#endregion-->
 </ResourceDictionary>

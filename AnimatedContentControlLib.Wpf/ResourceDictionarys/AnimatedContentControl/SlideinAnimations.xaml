@@ -2,9 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:ctl="clr-namespace:AnimatedContentControlLib.Wpf.Controls">
 
-    <!--#region 右方向スライドインアニメーション-->
     <Storyboard x:Key="SlideinRightAnimation">
-        <!--#region 新コンテンツの位置アニメーション-->
         <DoubleAnimationUsingKeyFrames BeginTime="0:0:0"
                                        Storyboard.TargetName="PrimaryContent"
                                        Storyboard.TargetProperty="(ctl:MobileContentPresenter.XPosFromWidthRethio)"
@@ -17,9 +15,7 @@
                 </EasingDoubleKeyFrame.EasingFunction>
             </EasingDoubleKeyFrame>
         </DoubleAnimationUsingKeyFrames>
-        <!--#endregion-->
 
-        <!--#region 旧コンテンツの位置アニメーション-->
         <DoubleAnimationUsingKeyFrames BeginTime="0:0:0"
                                        Storyboard.TargetName="SecondaryImage"
                                        Storyboard.TargetProperty="(ctl:MobileImage.XPosFromWidthRethio)"
@@ -32,13 +28,9 @@
                 </EasingDoubleKeyFrame.EasingFunction>
             </EasingDoubleKeyFrame>
         </DoubleAnimationUsingKeyFrames>
-        <!--#endregion-->
     </Storyboard>
-    <!--#endregion-->
 
-    <!--#region 左方向スライドインアニメーション-->
     <Storyboard x:Key="SlideinLeftAnimation">
-        <!--#region 新コンテンツの位置アニメーション-->
         <DoubleAnimationUsingKeyFrames BeginTime="0:0:0"
                                        Storyboard.TargetName="PrimaryContent"
                                        Storyboard.TargetProperty="(ctl:MobileContentPresenter.XPosFromWidthRethio)"
@@ -51,9 +43,7 @@
                 </EasingDoubleKeyFrame.EasingFunction>
             </EasingDoubleKeyFrame>
         </DoubleAnimationUsingKeyFrames>
-        <!--#endregion-->
 
-        <!--#region 旧コンテンツの位置アニメーション-->
         <DoubleAnimationUsingKeyFrames BeginTime="0:0:0"
                                        Storyboard.TargetName="SecondaryImage"
                                        Storyboard.TargetProperty="(ctl:MobileImage.XPosFromWidthRethio)"
@@ -66,13 +56,9 @@
                 </EasingDoubleKeyFrame.EasingFunction>
             </EasingDoubleKeyFrame>
         </DoubleAnimationUsingKeyFrames>
-        <!--#endregion-->
     </Storyboard>
-    <!--#endregion-->
 
-    <!--#region 下方向スライドインアニメーション-->
     <Storyboard x:Key="SlideinDownAnimation">
-        <!--#region 新コンテンツの位置アニメーション-->
         <DoubleAnimationUsingKeyFrames BeginTime="0:0:0"
                                        Storyboard.TargetName="PrimaryContent"
                                        Storyboard.TargetProperty="(ctl:MobileContentPresenter.YPosFromHeightRethio)"
@@ -85,9 +71,7 @@
                 </EasingDoubleKeyFrame.EasingFunction>
             </EasingDoubleKeyFrame>
         </DoubleAnimationUsingKeyFrames>
-        <!--#endregion-->
 
-        <!--#region 旧コンテンツの位置アニメーション-->
         <DoubleAnimationUsingKeyFrames BeginTime="0:0:0"
                                        Storyboard.TargetName="SecondaryImage"
                                        Storyboard.TargetProperty="(ctl:MobileImage.YPosFromHeightRethio)"
@@ -100,13 +84,9 @@
                 </EasingDoubleKeyFrame.EasingFunction>
             </EasingDoubleKeyFrame>
         </DoubleAnimationUsingKeyFrames>
-        <!--#endregion-->
     </Storyboard>
-    <!--#endregion-->
 
-    <!--#region 上方向スライドインアニメーション-->
     <Storyboard x:Key="SlideinUpAnimation">
-        <!--#region 新コンテンツの位置アニメーション-->
         <DoubleAnimationUsingKeyFrames BeginTime="0:0:0"
                                        Storyboard.TargetName="PrimaryContent"
                                        Storyboard.TargetProperty="(ctl:MobileContentPresenter.YPosFromHeightRethio)"
@@ -119,9 +99,7 @@
                 </EasingDoubleKeyFrame.EasingFunction>
             </EasingDoubleKeyFrame>
         </DoubleAnimationUsingKeyFrames>
-        <!--#endregion-->
 
-        <!--#region 旧コンテンツの位置アニメーション-->
         <DoubleAnimationUsingKeyFrames BeginTime="0:0:0"
                                        Storyboard.TargetName="SecondaryImage"
                                        Storyboard.TargetProperty="(ctl:MobileImage.YPosFromHeightRethio)"
@@ -134,7 +112,5 @@
                 </EasingDoubleKeyFrame.EasingFunction>
             </EasingDoubleKeyFrame>
         </DoubleAnimationUsingKeyFrames>
-        <!--#endregion-->
     </Storyboard>
-    <!--#endregion-->
 </ResourceDictionary>
