@@ -12,7 +12,7 @@
     <RepositoryType>git</RepositoryType>
     <Description>Library that provides constants containing built-in animation names that can be used with AnimatedContentControl; independent of UI framework and can be used with ViewModel</Description>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-	<Version>1.0.0</Version>
+	<Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
