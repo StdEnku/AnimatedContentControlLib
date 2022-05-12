@@ -6,7 +6,7 @@ namespace AnimatedContentControlLib.Wpf.Controls;
 
 internal class MobileImage : Image
 {
-    #region XPosFromWidthRethioPropertyプロパティ
+    #region XPosFromWidthRethioProperty依存関係プロパティ
     public static readonly DependencyProperty XPosFromWidthRethioProperty
         = DependencyProperty.Register(
             "XPosFromWidthRethio",
@@ -27,7 +27,7 @@ internal class MobileImage : Image
     }
     #endregion
 
-    #region YPosFromHeightRethioPropertyプロパティ
+    #region YPosFromHeightRethioProperty依存関係プロパティ
     public static readonly DependencyProperty YPosFromHeightRethioProperty
         = DependencyProperty.Register(
             "YPosFromHeightRethio",
@@ -45,6 +45,48 @@ internal class MobileImage : Image
     public double YPosFromHeightRethio
     {
         set => this.SetValue(YPosFromHeightRethioProperty, value);
+    }
+    #endregion
+
+    #region RotateXCenterFrmWidthRethioProperty依存関係プロパティ
+    public static readonly DependencyProperty RotateXCenterFromWidthRethioProperty
+        = DependencyProperty.Register(
+            "RotateXCenterFromWidthRethio",
+            typeof(double),
+            typeof(MobileImage),
+            new PropertyMetadata(0.0, onRotateXCenterFromWidthRethioChanged)
+        );
+
+    private static void onRotateXCenterFromWidthRethioChanged(DependencyObject obj, DependencyPropertyChangedEventArgs e)
+    {
+        var mobileImager = (MobileImage)obj;
+        mobileImager._rotate.CenterX = mobileImager.ActualWidth * (double)e.NewValue;
+    }
+
+    public double RotateXCenterFromWidthRethio
+    {
+        set => this.SetValue(RotateXCenterFromWidthRethioProperty, value);
+    }
+    #endregion
+
+    #region RotateYCenterFrmWidthRethioProperty依存関係プロパティ
+    public static readonly DependencyProperty RotateYCenterFromHeightRethioProperty
+        = DependencyProperty.Register(
+            "RotateYCenterFromHeightRethio",
+            typeof(double),
+            typeof(MobileImage),
+            new PropertyMetadata(0.0, onRotateYCenterFromHeightRethioChanged)
+        );
+
+    private static void onRotateYCenterFromHeightRethioChanged(DependencyObject obj, DependencyPropertyChangedEventArgs e)
+    {
+        var mobileImager = (MobileImage)obj;
+        mobileImager._rotate.CenterY = mobileImager.Height * (double)e.NewValue;
+    }
+
+    public double RotateYCenterFromHeightRethio
+    {
+        set => this.SetValue(RotateYCenterFromHeightRethioProperty, value);
     }
     #endregion
 
