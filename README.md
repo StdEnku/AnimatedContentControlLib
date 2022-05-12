@@ -105,10 +105,14 @@ public partial class MainWindow : Window
 
 ![ForReadme2.gif](./Img/ForReadme2.gif)
 
-The above sample uses code-behind for simplicity.
-However, it can be used in combination with Prism's RegionNavigation.
-RegionManager.RegionName attachment property as shown below.
-RegionManager.RegionName property as shown below, it can be executed in the same way as the screen transition using normal ContentControl.
+Specify the name of the built-in animation you want to use for the CurrentStoryboardKey property of the AnimatedContentControl class.
+The animation can be executed by specifying the name of the built-in animation you want to use in the CurrentStoryboardKey property of the
+Content property of the AnimatedContentControl class to execute the animation.
+The list of available animations is shown below.
+The CurrentStoryboardKey property is assumed to be bound to a ViewModel property.
+The CurrentStoryboardKey property is intended to be used in conjunction with a ViewModel property, so it is also possible to use it in combination with the
+EmbededAnimations class that holds the Static constant corresponding to each animation name.
+Core assembly that holds Static constants for each animation name.
 
 | gif                                     | animateion name    | Static constants defined in AnimatedContentControlLib.Core   |
 | --------------------------------------- | ------------------ | ------------------------------------------------------------ |

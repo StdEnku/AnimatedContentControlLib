@@ -108,6 +108,10 @@ AnimatedContentControlクラスのCurrentStoryboardKeyプロパティに
 使用したい組み込みアニメーション名を指定して
 Contentプロパティを変更するとアニメーションを実行できる。
 使用可能なアニメーションの一覧は下記に記す通りである。
+また、CurrentStoryboardKeyプロパティはViewModelのプロパティと
+バインドして使用する事を想定しているので
+各アニメーション名に対応するStatic定数を保持するEmbededAnimationsクラスを
+AnimatedContentControlLib.Coreアセンブリに用意している。
 
 | gif                                     | アニメーション名   | AnimatedContentControlLib.Core内で定義されているStatic定数   |
 | --------------------------------------- | ------------------ | ------------------------------------------------------------ |
@@ -132,4 +136,3 @@ PrismのRegionNavigationとの併用も可能である。
                             prism:RegionManager.RegionName="ContentRegion" 
                             CurrentStoryboardKey="SlideinRight" />
 ```
-
