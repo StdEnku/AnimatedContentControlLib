@@ -48,7 +48,7 @@ internal class MobileImage : Image
     }
     #endregion
 
-    #region RotateXCenterFrmWidthRethioProperty依存関係プロパティ
+    #region RotateXCenterFromWidthRethioProperty依存関係プロパティ
     public static readonly DependencyProperty RotateXCenterFromWidthRethioProperty
         = DependencyProperty.Register(
             "RotateXCenterFromWidthRethio",
@@ -69,7 +69,7 @@ internal class MobileImage : Image
     }
     #endregion
 
-    #region RotateYCenterFrmWidthRethioProperty依存関係プロパティ
+    #region RotateYCenterFromWidthRethioProperty依存関係プロパティ
     public static readonly DependencyProperty RotateYCenterFromHeightRethioProperty
         = DependencyProperty.Register(
             "RotateYCenterFromHeightRethio",
@@ -81,12 +81,54 @@ internal class MobileImage : Image
     private static void onRotateYCenterFromHeightRethioChanged(DependencyObject obj, DependencyPropertyChangedEventArgs e)
     {
         var mobileImager = (MobileImage)obj;
-        mobileImager._rotate.CenterY = mobileImager.Height * (double)e.NewValue;
+        mobileImager._rotate.CenterY = mobileImager.ActualHeight * (double)e.NewValue;
     }
 
     public double RotateYCenterFromHeightRethio
     {
         set => this.SetValue(RotateYCenterFromHeightRethioProperty, value);
+    }
+    #endregion
+
+    #region ScaleXCenterFromWidthRethioProperty依存関係プロパティ
+    public static readonly DependencyProperty ScaleXCenterFromWidthRethioProperty
+        = DependencyProperty.Register(
+            "ScaleXCenterFromWidthRethio",
+            typeof(double),
+            typeof(MobileImage),
+            new PropertyMetadata(0.0)
+        );
+
+    private static void onScaleXCenterFromWidthRethioChanged(DependencyObject obj, DependencyPropertyChangedEventArgs e)
+    {
+        var mobileImager = (MobileImage)obj;
+        mobileImager._scale.CenterX = mobileImager.ActualWidth * (double)e.NewValue;
+    }
+
+    public double ScaleXCenterFromWidthRethio
+    {
+        set => this.SetValue(ScaleXCenterFromWidthRethioProperty, value);
+    }
+    #endregion
+
+    #region ScaleYCenterFromHeightRethioProperty依存関係プロパティ
+    public static readonly DependencyProperty ScaleYCenterFromHeightRethioProperty
+        = DependencyProperty.Register(
+            "ScaleYCenterFromHeightRethio",
+            typeof(double),
+            typeof(MobileImage),
+            new PropertyMetadata(0.0)
+        );
+
+    private static void onScaleYCenterFromHeightRethioChanged(DependencyObject obj, DependencyPropertyChangedEventArgs e)
+    {
+        var mobileImager = (MobileImage)obj;
+        mobileImager._scale.CenterY = mobileImager.ActualHeight * (double)e.NewValue;
+    }
+
+    public double ScaleYCenterFromHeightRethio
+    {
+        set => this.SetValue(ScaleYCenterFromHeightRethioProperty, value);
     }
     #endregion
 

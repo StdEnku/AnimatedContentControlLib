@@ -48,7 +48,7 @@ internal class MobileContentPresenter : ContentPresenter
     }
     #endregion
 
-    #region RotateXCenterFrmWidthRethioProperty依存関係プロパティ
+    #region RotateXCenterFromWidthRethioProperty依存関係プロパティ
     public static readonly DependencyProperty RotateXCenterFromWidthRethioProperty
         = DependencyProperty.Register(
             "RotateXCenterFromWidthRethio",
@@ -69,7 +69,7 @@ internal class MobileContentPresenter : ContentPresenter
     }
     #endregion
 
-    #region RotateYCenterFrmWidthRethioProperty依存関係プロパティ
+    #region RotateYCenterFromWidthRethioProperty依存関係プロパティ
     public static readonly DependencyProperty RotateYCenterFromHeightRethioProperty
         = DependencyProperty.Register(
             "RotateYCenterFromHeightRethio",
@@ -81,12 +81,54 @@ internal class MobileContentPresenter : ContentPresenter
     private static void onRotateYCenterFromHeightRethioChanged(DependencyObject obj, DependencyPropertyChangedEventArgs e)
     {
         var mobileContentPresenter = (MobileContentPresenter)obj;
-        mobileContentPresenter._rotate.CenterY = mobileContentPresenter.Height * (double)e.NewValue;
+        mobileContentPresenter._rotate.CenterY = mobileContentPresenter.ActualHeight * (double)e.NewValue;
     }
 
     public double RotateYCenterFromHeightRethio
     {
         set=> this.SetValue(RotateYCenterFromHeightRethioProperty, value);
+    }
+    #endregion
+
+    #region ScaleXCenterFromWidthRethioProperty依存関係プロパティ
+    public static readonly DependencyProperty ScaleXCenterFromWidthRethioProperty
+        = DependencyProperty.Register(
+            "ScaleXCenterFromWidthRethio",
+            typeof(double),
+            typeof(MobileContentPresenter),
+            new PropertyMetadata(0.0)
+        );
+
+    private static void onScaleXCenterFromWidthRethioChanged(DependencyObject obj, DependencyPropertyChangedEventArgs e)
+    {
+        var mobileContentPresenter = (MobileContentPresenter)obj;
+        mobileContentPresenter._scale.CenterX = mobileContentPresenter.ActualWidth * (double)e.NewValue;
+    }
+
+    public double ScaleXCenterFromWidthRethio
+    {
+        set => this.SetValue(ScaleXCenterFromWidthRethioProperty, value);
+    }
+    #endregion
+
+    #region ScaleYCenterFromHeightRethioProperty依存関係プロパティ
+    public static readonly DependencyProperty ScaleYCenterFromHeightRethioProperty
+        = DependencyProperty.Register(
+            "ScaleYCenterFromHeightRethio",
+            typeof(double),
+            typeof(MobileContentPresenter),
+            new PropertyMetadata(0.0)
+        );
+
+    private static void onScaleYCenterFromHeightRethioChanged(DependencyObject obj, DependencyPropertyChangedEventArgs e)
+    {
+        var mobileContentPresenter = (MobileContentPresenter)obj;
+        mobileContentPresenter._scale.CenterY = mobileContentPresenter.ActualHeight * (double)e.NewValue;
+    }
+
+    public double ScaleYCenterFromHeightRethio
+    {
+        set => this.SetValue(ScaleYCenterFromHeightRethioProperty, value);
     }
     #endregion
 
