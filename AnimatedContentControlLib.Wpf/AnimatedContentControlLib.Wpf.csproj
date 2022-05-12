@@ -10,7 +10,7 @@
     <PackageIcon>Logo.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-	<VersionPefix>1.0.1</VersionPefix>
+	<Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
