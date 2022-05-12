@@ -20,11 +20,6 @@ VisualStudioのソリューションエクスプローラー内の[依存関係]
 
 ![ForReadme1.png](./Img/ForReadme1.png)
 
-コマンドを用いてインストールしたい際は下記URLに必要なコマンドが記されている。
-
-[NuGet Gallery | AnimatedContentControlLib.Wpf 1.0.0](https://www.nuget.org/packages/AnimatedContentControlLib.Wpf/)
-[NuGet Gallery | AnimatedContentControlLib.Core 1.0.0](https://www.nuget.org/packages/AnimatedContentControlLib.Core/)
-
 ### どちらのアセンブリをインストールすれば良いのか?
 
 ViewとViewModelを同一のプロジェクトで管理する場合AnimatedContentControlLib.Wpfのみの

@@ -23,11 +23,6 @@ in the search field of the [Browse] tab and install the same package as shown in
 
 ![ForReadme1.png](./Img/ForReadme1.png)
 
-If you want to install the software using commands, the necessary commands are described at the following URL.
-
-[NuGet Gallery | AnimatedContentControlLib.Wpf 1.0.0](https://www.nuget.org/packages/AnimatedContentControlLib.Wpf/)
-[NuGet Gallery | AnimatedContentControlLib.Core 1.0.0](https://www.nuget.org/packages/AnimatedContentControlLib.Core/)
-
 ### Which assembly should I install?
 
 When managing View and ViewModel in the same project, only AnimatedContentControlLib.
