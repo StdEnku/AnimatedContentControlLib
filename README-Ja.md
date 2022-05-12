@@ -162,13 +162,13 @@ MainWindow.xaml
                                     CurrentStoryboardKey="MyAnimation">
 
             <acl:AnimatedContentControl.Storyboards>
-                <Storyboard acl:AnimatedContentControl.Key="MyAnimation">
+            	<Storyboard acl:AnimatedContentControl.Key="MyAnimation">
                     <DoubleAnimationUsingKeyFrames BeginTime="0:0:0"
                                                    Storyboard.TargetName="PrimaryContent"
                                                    Storyboard.TargetProperty="(UIElement.Opacity)"
                                                    FillBehavior="Stop">
 
-                        <LinearDoubleKeyFrame KeyTime="0:0:0" Value="0" />
+                        <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="0" />
                         <LinearDoubleKeyFrame KeyTime="0:0:1" Value="1" />
                     </DoubleAnimationUsingKeyFrames>
 
@@ -177,7 +177,7 @@ MainWindow.xaml
                                                    Storyboard.TargetProperty="(UIElement.Opacity)"
                                                    FillBehavior="Stop">
 
-                        <LinearDoubleKeyFrame KeyTime="0:0:0" Value="1" />
+                        <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="1" />
                         <LinearDoubleKeyFrame KeyTime="0:0:1" Value="0" />
                     </DoubleAnimationUsingKeyFrames>
 
@@ -186,7 +186,7 @@ MainWindow.xaml
                                                    Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[1].(RotateTransform.Angle)"
                                                    FillBehavior="Stop">
 
-                        <LinearDoubleKeyFrame KeyTime="0:0:0" Value="0" />
+                        <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="0" />
                         <LinearDoubleKeyFrame KeyTime="0:0:1" Value="360" />
                     </DoubleAnimationUsingKeyFrames>
 
@@ -195,7 +195,7 @@ MainWindow.xaml
                                                    Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[1].(RotateTransform.Angle)"
                                                    FillBehavior="Stop">
 
-                        <LinearDoubleKeyFrame KeyTime="0:0:0" Value="-45" />
+                        <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="-45" />
                         <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0">
                             <EasingDoubleKeyFrame.EasingFunction>
                                 <BounceEase Bounciness="5" />
@@ -208,7 +208,7 @@ MainWindow.xaml
                                                    Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[1].(RotateTransform.Angle)"
                                                    FillBehavior="Stop">
 
-                        <LinearDoubleKeyFrame KeyTime="0:0:0" Value="0" />
+                        <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="0" />
                         <EasingDoubleKeyFrame KeyTime="0:0:1" Value="45">
                             <EasingDoubleKeyFrame.EasingFunction>
                                 <BounceEase Bounciness="5" />
@@ -225,7 +225,6 @@ MainWindow.xaml
                 Grid.Row="1" Margin="5" />
     </Grid>
 </Window>
-
 ```
 
 MainWindow.xaml.cs
