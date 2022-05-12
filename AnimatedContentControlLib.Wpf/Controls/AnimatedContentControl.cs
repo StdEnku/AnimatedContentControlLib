@@ -40,13 +40,13 @@ public class AnimatedContentControl : ContentControl
             "EmbededStoryboards",
             typeof(StoryBoardList),
             typeof(AnimatedContentControl),
-            new PropertyMetadata(null)
+            new PropertyMetadata(new StoryBoardList())
         );
     
 
-    internal StoryBoardList? EmbededStoryboards
+    internal StoryBoardList EmbededStoryboards
     {
-        get => (StoryBoardList?)this.GetValue(EmbededStoryboardsProperty);
+        get => (StoryBoardList)this.GetValue(EmbededStoryboardsProperty);
         set => this.SetValue(EmbededStoryboardsProperty, value);
     }
     #endregion
@@ -57,12 +57,12 @@ public class AnimatedContentControl : ContentControl
             "Storyboards",
             typeof(StoryBoardList),
             typeof(AnimatedContentControl),
-            new PropertyMetadata(null)
+            new PropertyMetadata(new StoryBoardList())
         );
 
-    public StoryBoardList? Storyboards
+    public StoryBoardList Storyboards
     {
-        get => (StoryBoardList?)this.GetValue(StoryboardsProperty);
+        get => (StoryBoardList)this.GetValue(StoryboardsProperty);
         set => this.SetValue(StoryboardsProperty, value);
     }
     #endregion
@@ -114,8 +114,8 @@ public class AnimatedContentControl : ContentControl
         if (oldContent == newContent) return;
         if (oldContent is null) return;
 
-        var storyboard = this.Storyboards?.Find(x => GetKey(x) == this.CurrentStoryboardKey);
-        storyboard ??= this.EmbededStoryboards?.Find(x => GetKey(x) == this.CurrentStoryboardKey);
+        var storyboard = this.Storyboards.Find(x => GetKey(x) == this.CurrentStoryboardKey);
+        storyboard ??= this.EmbededStoryboards.Find(x => GetKey(x) == this.CurrentStoryboardKey);
         if (storyboard is null) return;
 
         var rootPanel = (Grid)this.Template.FindName(GRID_IN_TEMPLATE_NAME, this);
