@@ -4,7 +4,7 @@ using System.Windows.Media;
 
 namespace AnimatedContentControlLib.Wpf.Controls;
 
-internal class MobileContentPresenter : ContentPresenter
+public class MobileContentPresenter : ContentPresenter
 {
     #region XPosFromWidthRethioProperty依存関係プロパティ
     public static readonly DependencyProperty XPosFromWidthRethioProperty

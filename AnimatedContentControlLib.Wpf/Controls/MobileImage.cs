@@ -4,7 +4,7 @@ using System.Windows.Media;
 
 namespace AnimatedContentControlLib.Wpf.Controls;
 
-internal class MobileImage : Image
+public class MobileImage : Image
 {
     #region XPosFromWidthRethioProperty依存関係プロパティ
     public static readonly DependencyProperty XPosFromWidthRethioProperty
