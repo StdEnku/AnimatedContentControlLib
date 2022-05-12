@@ -136,3 +136,125 @@ RegionManager.RegionName property as shown below, it can be executed in the same
                             CurrentStoryboardKey="SlideinRight" />
 ```
 
+## 自作アニメーションを使用する際のサンプル
+
+MainWindow.xaml
+
+```xaml
+<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:acl="http://AnimatedContentControlLib/Wpf/"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <acl:AnimatedContentControl Name="MainContent" 
+                                    CurrentStoryboardKey="MyAnimation">
+
+            <acl:AnimatedContentControl.Storyboards>
+                <Storyboard acl:AnimatedContentControl.Key="MyAnimation">
+                    <DoubleAnimationUsingKeyFrames BeginTime="0:0:0"
+                                                   Storyboard.TargetName="PrimaryContent"
+                                                   Storyboard.TargetProperty="(UIElement.Opacity)"
+                                                   FillBehavior="Stop">
+
+                        <LinearDoubleKeyFrame KeyTime="0:0:0" Value="0" />
+                        <LinearDoubleKeyFrame KeyTime="0:0:1" Value="1" />
+                    </DoubleAnimationUsingKeyFrames>
+
+                    <DoubleAnimationUsingKeyFrames BeginTime="0:0:0"
+                                                   Storyboard.TargetName="SecondaryImage"
+                                                   Storyboard.TargetProperty="(UIElement.Opacity)"
+                                                   FillBehavior="Stop">
+
+                        <LinearDoubleKeyFrame KeyTime="0:0:0" Value="1" />
+                        <LinearDoubleKeyFrame KeyTime="0:0:1" Value="0" />
+                    </DoubleAnimationUsingKeyFrames>
+
+                    <DoubleAnimationUsingKeyFrames BeginTime="0:0:0"
+                                                   Storyboard.TargetName="PrimaryContent"
+                                                   Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[1].(RotateTransform.Angle)"
+                                                   FillBehavior="Stop">
+
+                        <LinearDoubleKeyFrame KeyTime="0:0:0" Value="0" />
+                        <LinearDoubleKeyFrame KeyTime="0:0:1" Value="360" />
+                    </DoubleAnimationUsingKeyFrames>
+
+                    <DoubleAnimationUsingKeyFrames BeginTime="0:0:0"
+                                                   Storyboard.TargetName="PrimaryContent"
+                                                   Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[1].(RotateTransform.Angle)"
+                                                   FillBehavior="Stop">
+
+                        <LinearDoubleKeyFrame KeyTime="0:0:0" Value="-45" />
+                        <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0">
+                            <EasingDoubleKeyFrame.EasingFunction>
+                                <BounceEase Bounciness="5" />
+                            </EasingDoubleKeyFrame.EasingFunction>
+                        </EasingDoubleKeyFrame>
+                    </DoubleAnimationUsingKeyFrames>
+
+                    <DoubleAnimationUsingKeyFrames BeginTime="0:0:0"
+                                                   Storyboard.TargetName="SecondaryImage"
+                                                   Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[1].(RotateTransform.Angle)"
+                                                   FillBehavior="Stop">
+
+                        <LinearDoubleKeyFrame KeyTime="0:0:0" Value="0" />
+                        <EasingDoubleKeyFrame KeyTime="0:0:1" Value="45">
+                            <EasingDoubleKeyFrame.EasingFunction>
+                                <BounceEase Bounciness="5" />
+                            </EasingDoubleKeyFrame.EasingFunction>
+                        </EasingDoubleKeyFrame>
+                    </DoubleAnimationUsingKeyFrames>
+                </Storyboard>
+            </acl:AnimatedContentControl.Storyboards>
+        </acl:AnimatedContentControl>
+
+        <Button Content="Navigate" 
+                IsEnabled="{Binding ElementName=MainContent, Path=IsAnimationCompleted}" 
+                Click="Button_Click" 
+                Grid.Row="1" Margin="5" />
+    </Grid>
+</Window>
+
+```
+
+MainWindow.xaml.cs
+
+```
+using System;
+using System.Windows;
+
+namespace WpfApp1;
+
+public partial class MainWindow : Window
+{
+    Type _currentContent = typeof(Control1);
+
+    public MainWindow()
+    {
+        InitializeComponent();
+        this.Loaded += (s, e) =>
+        {
+            this.MainContent.Content = Activator.CreateInstance(this._currentContent);
+        };
+    }
+
+    private void Button_Click(object sender, RoutedEventArgs e)
+    {
+        this._currentContent = 
+            this._currentContent == typeof(Control1) ? typeof(Control2) : typeof(Control1);
+        this.MainContent.Content = Activator.CreateInstance(this._currentContent);
+    }
+}
+```
+
+![ForReadme10](C:/Users/Syple/デスクトップ/AnimatedContentControlLib/Img/ForReadme10.gif)
