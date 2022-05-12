@@ -1,6 +1,6 @@
 # AnimatedContentControlLib
 
-[日本語版README.md](https://github.com/StdEnku/AnimatedContentControlLib/blob/develop/README-Ja.md)
+[日本語版README.md](https://github.com/StdEnku/AnimatedContentControlLib/blob/main/README-Ja.md)
 
 ## Summary
 
