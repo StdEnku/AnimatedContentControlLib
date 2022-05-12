@@ -1,5 +1,7 @@
 # AnimatedContentControlLib
 
+[日本語版README.md](https://github.com/StdEnku/AnimatedContentControlLib/blob/develop/README-Ja.md)
+
 ## 概要
 
 本ライブラリはContentプロパティ変更時に自作したアニメーションや
