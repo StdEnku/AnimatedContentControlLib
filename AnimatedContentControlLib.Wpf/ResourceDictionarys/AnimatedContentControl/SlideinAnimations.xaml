@@ -10,7 +10,7 @@
                                        Storyboard.TargetProperty="(ctl:MobileContentPresenter.XPosFromWidthRethio)"
                                        FillBehavior="Stop">
 
-            <LinearDoubleKeyFrame KeyTime="0:0:0" Value="-1" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="-1" />
             <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0">
                 <EasingDoubleKeyFrame.EasingFunction>
                     <SineEase EasingMode="EaseOut" />
@@ -25,7 +25,7 @@
                                        Storyboard.TargetProperty="(ctl:MobileImage.XPosFromWidthRethio)"
                                        FillBehavior="Stop">
 
-            <LinearDoubleKeyFrame KeyTime="0:0:0" Value="0" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="0" />
             <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1">
                 <EasingDoubleKeyFrame.EasingFunction>
                     <SineEase EasingMode="EaseOut" />
@@ -44,7 +44,7 @@
                                        Storyboard.TargetProperty="(ctl:MobileContentPresenter.XPosFromWidthRethio)"
                                        FillBehavior="Stop">
 
-            <LinearDoubleKeyFrame KeyTime="0:0:0" Value="1" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="1" />
             <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0">
                 <EasingDoubleKeyFrame.EasingFunction>
                     <SineEase EasingMode="EaseOut" />
@@ -59,7 +59,7 @@
                                        Storyboard.TargetProperty="(ctl:MobileImage.XPosFromWidthRethio)"
                                        FillBehavior="Stop">
 
-            <LinearDoubleKeyFrame KeyTime="0:0:0" Value="0" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="0" />
             <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-1">
                 <EasingDoubleKeyFrame.EasingFunction>
                     <SineEase EasingMode="EaseOut" />
@@ -78,7 +78,7 @@
                                        Storyboard.TargetProperty="(ctl:MobileContentPresenter.YPosFromHeightRethio)"
                                        FillBehavior="Stop">
 
-            <LinearDoubleKeyFrame KeyTime="0:0:0" Value="-1" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="-1" />
             <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0">
                 <EasingDoubleKeyFrame.EasingFunction>
                     <SineEase EasingMode="EaseOut" />
@@ -93,7 +93,7 @@
                                        Storyboard.TargetProperty="(ctl:MobileImage.YPosFromHeightRethio)"
                                        FillBehavior="Stop">
 
-            <LinearDoubleKeyFrame KeyTime="0:0:0" Value="0" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="0" />
             <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1">
                 <EasingDoubleKeyFrame.EasingFunction>
                     <SineEase EasingMode="EaseOut" />
@@ -112,7 +112,7 @@
                                        Storyboard.TargetProperty="(ctl:MobileContentPresenter.YPosFromHeightRethio)"
                                        FillBehavior="Stop">
 
-            <LinearDoubleKeyFrame KeyTime="0:0:0" Value="1" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="1" />
             <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0">
                 <EasingDoubleKeyFrame.EasingFunction>
                     <SineEase EasingMode="EaseOut" />
@@ -127,7 +127,7 @@
                                        Storyboard.TargetProperty="(ctl:MobileImage.YPosFromHeightRethio)"
                                        FillBehavior="Stop">
 
-            <LinearDoubleKeyFrame KeyTime="0:0:0" Value="0" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="0" />
             <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-1">
                 <EasingDoubleKeyFrame.EasingFunction>
                     <SineEase EasingMode="EaseOut" />

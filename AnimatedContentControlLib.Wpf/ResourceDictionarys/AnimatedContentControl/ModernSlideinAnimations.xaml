@@ -11,8 +11,8 @@
                                        Storyboard.TargetProperty="(ctl:MobileContentPresenter.XPosFromWidthRethio)"
                                        FillBehavior="Stop">
 
-            <LinearDoubleKeyFrame KeyTime="0:0:0" Value="-0.2" />
-            <LinearDoubleKeyFrame KeyTime="0:0:0.2" Value="-0.2" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="-0.2" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0.2" Value="-0.2" />
             <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0">
                 <EasingDoubleKeyFrame.EasingFunction>
                     <SineEase EasingMode="EaseOut" />
@@ -27,13 +27,13 @@
                                        Storyboard.TargetProperty="(ctl:MobileImage.XPosFromWidthRethio)"
                                        FillBehavior="Stop">
 
-            <LinearDoubleKeyFrame KeyTime="0:0:0" Value="0" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="0" />
             <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.2">
                 <EasingDoubleKeyFrame.EasingFunction>
                     <SineEase EasingMode="EaseOut" />
                 </EasingDoubleKeyFrame.EasingFunction>
             </EasingDoubleKeyFrame>
-            <LinearDoubleKeyFrame KeyTime="0:0:0.4" Value="0.2" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0.4" Value="0.2" />
         </DoubleAnimationUsingKeyFrames>
         <!--#endregion-->
 
@@ -43,8 +43,8 @@
                                        Storyboard.TargetProperty="(UIElement.Opacity)"
                                        FillBehavior="Stop">
 
-            <LinearDoubleKeyFrame KeyTime="0:0:0" Value="0" />
-            <LinearDoubleKeyFrame KeyTime="0:0:0.2" Value="0" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="0" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0.2" Value="0" />
             <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1">
                 <EasingDoubleKeyFrame.EasingFunction>
                     <QuadraticEase EasingMode="EaseIn" />
@@ -59,13 +59,13 @@
                                        Storyboard.TargetProperty="(UIElement.Opacity)"
                                        FillBehavior="Stop">
 
-            <LinearDoubleKeyFrame KeyTime="0:0:0" Value="1" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="1" />
             <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0">
                 <EasingDoubleKeyFrame.EasingFunction>
                     <QuadraticEase EasingMode="EaseOut" />
                 </EasingDoubleKeyFrame.EasingFunction>
             </EasingDoubleKeyFrame>
-            <LinearDoubleKeyFrame KeyTime="0:0:0.4" Value="0" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0.4" Value="0" />
         </DoubleAnimationUsingKeyFrames>
         <!--#endregion-->
 
@@ -81,8 +81,8 @@
                                        Storyboard.TargetProperty="(ctl:MobileContentPresenter.XPosFromWidthRethio)"
                                        FillBehavior="Stop">
 
-            <LinearDoubleKeyFrame KeyTime="0:0:0" Value="0.2" />
-            <LinearDoubleKeyFrame KeyTime="0:0:0.2" Value="0.2" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="0.2" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0.2" Value="0.2" />
             <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0">
                 <EasingDoubleKeyFrame.EasingFunction>
                     <SineEase EasingMode="EaseOut" />
@@ -97,13 +97,13 @@
                                        Storyboard.TargetProperty="(ctl:MobileImage.XPosFromWidthRethio)"
                                        FillBehavior="Stop">
 
-            <LinearDoubleKeyFrame KeyTime="0:0:0" Value="0" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="0" />
             <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-0.2">
                 <EasingDoubleKeyFrame.EasingFunction>
                     <SineEase EasingMode="EaseOut" />
                 </EasingDoubleKeyFrame.EasingFunction>
             </EasingDoubleKeyFrame>
-            <LinearDoubleKeyFrame KeyTime="0:0:0.4" Value="-0.2" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0.4" Value="-0.2" />
         </DoubleAnimationUsingKeyFrames>
         <!--#endregion-->
 
@@ -113,8 +113,8 @@
                                        Storyboard.TargetProperty="(UIElement.Opacity)"
                                        FillBehavior="Stop">
 
-            <LinearDoubleKeyFrame KeyTime="0:0:0" Value="0" />
-            <LinearDoubleKeyFrame KeyTime="0:0:0.2" Value="0" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="0" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0.2" Value="0" />
             <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1">
                 <EasingDoubleKeyFrame.EasingFunction>
                     <QuadraticEase EasingMode="EaseIn" />
@@ -129,13 +129,13 @@
                                        Storyboard.TargetProperty="(UIElement.Opacity)"
                                        FillBehavior="Stop">
 
-            <LinearDoubleKeyFrame KeyTime="0:0:0" Value="1" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="1" />
             <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0">
                 <EasingDoubleKeyFrame.EasingFunction>
                     <QuadraticEase EasingMode="EaseOut" />
                 </EasingDoubleKeyFrame.EasingFunction>
             </EasingDoubleKeyFrame>
-            <LinearDoubleKeyFrame KeyTime="0:0:0.4" Value="0" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0.4" Value="0" />
         </DoubleAnimationUsingKeyFrames>
         <!--#endregion-->
     </Storyboard>
@@ -150,8 +150,8 @@
                                        Storyboard.TargetProperty="(ctl:MobileContentPresenter.YPosFromHeightRethio)"
                                        FillBehavior="Stop">
 
-            <LinearDoubleKeyFrame KeyTime="0:0:0" Value="0.2" />
-            <LinearDoubleKeyFrame KeyTime="0:0:0.2" Value="0.2" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="0.2" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0.2" Value="0.2" />
             <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0">
                 <EasingDoubleKeyFrame.EasingFunction>
                     <SineEase EasingMode="EaseOut" />
@@ -166,13 +166,13 @@
                                        Storyboard.TargetProperty="(ctl:MobileImage.YPosFromHeightRethio)"
                                        FillBehavior="Stop">
 
-            <LinearDoubleKeyFrame KeyTime="0:0:0" Value="0" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="0" />
             <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-0.2">
                 <EasingDoubleKeyFrame.EasingFunction>
                     <SineEase EasingMode="EaseOut" />
                 </EasingDoubleKeyFrame.EasingFunction>
             </EasingDoubleKeyFrame>
-            <LinearDoubleKeyFrame KeyTime="0:0:0.4" Value="-0.2" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0.4" Value="-0.2" />
         </DoubleAnimationUsingKeyFrames>
         <!--#endregion-->
 
@@ -182,8 +182,8 @@
                                        Storyboard.TargetProperty="(UIElement.Opacity)"
                                        FillBehavior="Stop">
 
-            <LinearDoubleKeyFrame KeyTime="0:0:0" Value="0" />
-            <LinearDoubleKeyFrame KeyTime="0:0:0.2" Value="0" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="0" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0.2" Value="0" />
             <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1">
                 <EasingDoubleKeyFrame.EasingFunction>
                     <QuadraticEase EasingMode="EaseIn" />
@@ -198,13 +198,13 @@
                                        Storyboard.TargetProperty="(UIElement.Opacity)"
                                        FillBehavior="Stop">
 
-            <LinearDoubleKeyFrame KeyTime="0:0:0" Value="1" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="1" />
             <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0">
                 <EasingDoubleKeyFrame.EasingFunction>
                     <QuadraticEase EasingMode="EaseOut" />
                 </EasingDoubleKeyFrame.EasingFunction>
             </EasingDoubleKeyFrame>
-            <LinearDoubleKeyFrame KeyTime="0:0:0.4" Value="0" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0.4" Value="0" />
         </DoubleAnimationUsingKeyFrames>
         <!--#endregion-->
 
@@ -220,8 +220,8 @@
                                        Storyboard.TargetProperty="(ctl:MobileContentPresenter.YPosFromHeightRethio)"
                                        FillBehavior="Stop">
 
-            <LinearDoubleKeyFrame KeyTime="0:0:0" Value="-0.2" />
-            <LinearDoubleKeyFrame KeyTime="0:0:0.2" Value="-0.2" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="-0.2" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0.2" Value="-0.2" />
             <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0">
                 <EasingDoubleKeyFrame.EasingFunction>
                     <SineEase EasingMode="EaseOut" />
@@ -236,13 +236,13 @@
                                        Storyboard.TargetProperty="(ctl:MobileImage.YPosFromHeightRethio)"
                                        FillBehavior="Stop">
 
-            <LinearDoubleKeyFrame KeyTime="0:0:0" Value="0" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="0" />
             <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.2">
                 <EasingDoubleKeyFrame.EasingFunction>
                     <SineEase EasingMode="EaseOut" />
                 </EasingDoubleKeyFrame.EasingFunction>
             </EasingDoubleKeyFrame>
-            <LinearDoubleKeyFrame KeyTime="0:0:0.4" Value="0.2" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0.4" Value="0.2" />
         </DoubleAnimationUsingKeyFrames>
         <!--#endregion-->
 
@@ -252,8 +252,8 @@
                                        Storyboard.TargetProperty="(UIElement.Opacity)"
                                        FillBehavior="Stop">
 
-            <LinearDoubleKeyFrame KeyTime="0:0:0" Value="0" />
-            <LinearDoubleKeyFrame KeyTime="0:0:0.2" Value="0" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="0" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0.2" Value="0" />
             <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1">
                 <EasingDoubleKeyFrame.EasingFunction>
                     <QuadraticEase EasingMode="EaseIn" />
@@ -268,13 +268,13 @@
                                        Storyboard.TargetProperty="(UIElement.Opacity)"
                                        FillBehavior="Stop">
 
-            <LinearDoubleKeyFrame KeyTime="0:0:0" Value="1" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="1" />
             <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0">
                 <EasingDoubleKeyFrame.EasingFunction>
                     <QuadraticEase EasingMode="EaseOut" />
                 </EasingDoubleKeyFrame.EasingFunction>
             </EasingDoubleKeyFrame>
-            <LinearDoubleKeyFrame KeyTime="0:0:0.4" Value="0" />
+            <DiscreteDoubleKeyFrame KeyTime="0:0:0.4" Value="0" />
         </DoubleAnimationUsingKeyFrames>
         <!--#endregion-->
 
