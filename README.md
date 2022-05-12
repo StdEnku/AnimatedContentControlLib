@@ -19,7 +19,7 @@ Right-click on [Dependencies] in the Solution Explorer of VisualStudio
 [Nuget Package Management] and in the search field of the [Browse] tab, type "AnimatedContentControlLib
 in the search field of the [Browse] tab and install the same package as shown in the picture below.
 
-![ForReadme1.png](C:\Users\Syple\デスクトップ\AnimatedContentControlLib\Img\ForReadme1.png)
+![ForReadme1.png](./Img/ForReadme1.png)
 
 If you want to install the software using commands, the necessary commands are described at the following URL.
 
@@ -101,7 +101,7 @@ public partial class MainWindow : Window
 
 
 
-![ForReadme2.gif](C:\Users\Syple\デスクトップ\AnimatedContentControlLib\Img\ForReadme2.gif)
+![ForReadme2.gif](./Img/ForReadme2.gif)
 
 The above sample uses code-behind for simplicity.
 However, it can be used in combination with Prism's RegionNavigation.
