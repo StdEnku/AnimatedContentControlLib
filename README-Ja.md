@@ -1,45 +1,42 @@
 # AnimatedContentControlLib
 
-[日本語版README.md](https://github.com/StdEnku/AnimatedContentControlLib/blob/develop/README-Ja.md)
+## 概要
 
-## Summary
+本ライブラリはContentプロパティ変更時に自作したアニメーションや
+組み込まれた標準のアニメーションを実行可能な
+WPFで使用可能なAnimatedContentControlコントロールを提供するライブラリである。
 
-This library enables the execution of home-made animations and built-in standard animations when the Content property is changed.
-This library provides an AnimatedContentControl control that can be used with WPF.
-This library provides AnimatedContentControl controls that can be used with WPF.
-
-This library consists of two assemblies.
-
-| assembly names                 | remarks                                                      |
+本ライブラリは二つのアセンブリから構成されている。
+| アセンブリ名                   | 備考                                                         |
 | ------------------------------ | ------------------------------------------------------------ |
-| AnimatedContentControlLib.Core | Assembly that provides constants for built-in animation names that can be used in WPF-independent ViewModel |
-| AnimatedContentControlLib.Wpf  | Assembly that provides the AnimatedContentControl body       |
+| AnimatedContentControlLib.Core | WPFに依存しないViewModelで使用可能な組み込みアニメーション名の定数を提供するアセンブリ |
+| AnimatedContentControlLib.Wpf  | AnimatedContentControl本体を提供するアセンブリ               |
 
-## Installation
+## インストール方法
 
-Right-click on [Dependencies] in the Solution Explorer of VisualStudio
-[Nuget Package Management] and in the search field of the [Browse] tab, type "AnimatedContentControlLib
-in the search field of the [Browse] tab and install the same package as shown in the picture below.
+VisualStudioのソリューションエクスプローラー内の[依存関係]を右クリックして
+[Nugetパッケージの管理]を選択して[参照]タブの検索欄にAnimatedContentControlLib
+と入力後下記写真と同じパッケージをインストールすればよい。
 
 ![ForReadme1.png](./Img/ForReadme1.png)
 
-If you want to install the software using commands, the necessary commands are described at the following URL.
+コマンドを用いてインストールしたい際は下記URLに必要なコマンドが記されている。
 
 [NuGet Gallery | AnimatedContentControlLib.Wpf 1.0.0](https://www.nuget.org/packages/AnimatedContentControlLib.Wpf/)
 [NuGet Gallery | AnimatedContentControlLib.Core 1.0.0](https://www.nuget.org/packages/AnimatedContentControlLib.Core/)
 
-### Which assembly should I install?
+### どちらのアセンブリをインストールすれば良いのか?
 
-When managing View and ViewModel in the same project, only AnimatedContentControlLib.
-Wpf only needs to be installed.
-Wpf depends on AnimatedContentControlLib.
-Wpf installation only, and AnimatedContentControlLib.Core is also included.
+ViewとViewModelを同一のプロジェクトで管理する場合AnimatedContentControlLib.Wpfのみの
+インストールでよい。
+AnimatedContentControlLib.WpfはAnimatedContentControlLib.Coreに依存しているので
+AnimatedContentControlLib.WpfのインストールのみでAnimatedContentControlLib.Coreも付いてくる。
 
-However, if the View and ViewModel are in separate projects
-Install AnimatedContentControlLib.Wpf in the View side project, and
-Wpf and then install AnimatedContentControlLib.Core in the ViewModel project.
+しかし、ViewとViewModelが別プロジェクトの場合
+View側のプロジェクトにAnimatedContentControlLib.Wpfをインストールし、
+ViewModel側のプロジェクトにAnimatedContentControlLib.Coreをインストールすれば良い。
 
-## Sample of using predefined built-in animations
+## 定義済みの組み込みアニメーションを使用する際のサンプル
 
 MainWindow.xaml
 
@@ -105,16 +102,18 @@ public partial class MainWindow : Window
 
 ![ForReadme2.gif](./Img/ForReadme2.gif)
 
-Specify the name of the built-in animation you want to use for the CurrentStoryboardKey property of the AnimatedContentControl class.
-The animation can be executed by specifying the name of the built-in animation you want to use in the CurrentStoryboardKey property of the
-Content property of the AnimatedContentControl class to execute the animation.
-The list of available animations is shown below.
-The CurrentStoryboardKey property is assumed to be bound to a ViewModel property.
-The CurrentStoryboardKey property is intended to be used in conjunction with a ViewModel property, so it is also possible to use it in combination with the
-EmbededAnimations class that holds the Static constant corresponding to each animation name.
-Core assembly that holds Static constants for each animation name.
 
-| gif                                     | animateion name    | Static constants defined in AnimatedContentControlLib.Core   |
+
+AnimatedContentControlクラスのCurrentStoryboardKeyプロパティに
+使用したい組み込みアニメーション名を指定して
+Contentプロパティを変更するとアニメーションを実行できる。
+使用可能なアニメーションの一覧は下記に記す通りである。
+また、CurrentStoryboardKeyプロパティはViewModelのプロパティと
+バインドして使用する事を想定しているので
+各アニメーション名に対応するStatic定数を保持するEmbededAnimationsクラスを
+AnimatedContentControlLib.Coreアセンブリに用意している。
+
+| gif                                     | アニメーション名   | AnimatedContentControlLib.Core内で定義されているStatic定数   |
 | --------------------------------------- | ------------------ | ------------------------------------------------------------ |
 | ![ForReadme2.gif](./Img/ForReadme6.gif) | SlideinRight       | AnimatedContentControlLib.Core.Constants.EmbededAnimations.SlideinRight |
 | ![ForReadme2.gif](./Img/ForReadme7.gif) | SlideinLeft        | AnimatedContentControlLib.Core.Constants.EmbededAnimations.SlideinLeft |
@@ -125,14 +124,15 @@ Core assembly that holds Static constants for each animation name.
 | ![ForReadme2.gif](./Img/ForReadme4.gif) | ModernSlideinUp    | AnimatedContentControlLib.Core.Constants.EmbededAnimations.ModernSlideinUp |
 | ![ForReadme2.gif](./Img/ForReadme5.gif) | ModernSlideinDown  | AnimatedContentControlLib.Core.Constants.EmbededAnimations.ModernSlideinDown |
 
-The above sample uses code-behind for simplicity.
-However, it can be used in combination with Prism's RegionNavigation.
-RegionManager.RegionName attachment property as shown below.
-RegionManager.RegionName property as shown below, it can be executed in the same way as the screen transition using normal ContentControl.
+
+
+尚上記サンプルは簡略化のためコードビハインドを使用しているが
+PrismのRegionNavigationとの併用も可能である。
+その場合下記のようにRegionManager.RegionName添付プロパティを追加すれば
+普通のContentControlを使用した画面遷移と同じように実行が可能である。
 
 ```xaml
 <acl:AnimatedContentControl Name="ContentRegion" 
                             prism:RegionManager.RegionName="ContentRegion" 
                             CurrentStoryboardKey="SlideinRight" />
 ```
-
