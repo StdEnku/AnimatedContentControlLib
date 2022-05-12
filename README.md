@@ -136,7 +136,7 @@ RegionManager.RegionName property as shown below, it can be executed in the same
                             CurrentStoryboardKey="SlideinRight" />
 ```
 
-## 自作アニメーションを使用する際のサンプル
+## Samples of using homemade animations
 
 MainWindow.xaml
 
@@ -257,4 +257,4 @@ public partial class MainWindow : Window
 }
 ```
 
-![ForReadme10](C:/Users/Syple/デスクトップ/AnimatedContentControlLib/Img/ForReadme10.gif)
+![ForReadme10](./Img/ForReadme10.gif)
