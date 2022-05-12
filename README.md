@@ -1,5 +1,7 @@
 # AnimatedContentControlLib
 
+[日本語版README.md](https://github.com/StdEnku/AnimatedContentControlLib/blob/develop/README-Ja.md)
+
 ## Summary
 
 This library enables the execution of home-made animations and built-in standard animations when the Content property is changed.
