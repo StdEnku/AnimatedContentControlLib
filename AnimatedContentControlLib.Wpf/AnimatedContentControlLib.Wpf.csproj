@@ -10,6 +10,7 @@
     <PackageIcon>Logo.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	<VersionPefix>1.0.1</VersionPefix>
   </PropertyGroup>
 
   <ItemGroup>
