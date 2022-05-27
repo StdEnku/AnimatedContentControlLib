@@ -11,7 +11,7 @@ using Config = Demo.Properties.Settings;
 
 namespace Demo.ViewModels;
 
-internal class ViewModelBase : BindableBase, INavigationAware
+internal class ViewModelBase : BindableBase, INavigationAware, IRegionMemberLifetime
 {
     private IRegionManager _regionManager;
 
@@ -24,6 +24,8 @@ internal class ViewModelBase : BindableBase, INavigationAware
     {
         this._regionManager.RequestNavigate("PrimaryContent", nextViewName);
     });
+
+    public bool KeepAlive => false;
 
     public bool IsNavigationTarget(NavigationContext navigationContext) => false;
 

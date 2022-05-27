@@ -48,11 +48,12 @@ public static class AnimationNameMessanger
     {
         lock (s_lock)
         {
-            IAnimationNameMessangerTarget? currentTarget;
-
-            foreach (var current in s_targets)
+            // foreach文中で要素数を変えるような操作を行うと
+            // 例外が発生するのでディープコピーで対応
+            var targets = s_targets.ToArray();
+            foreach (var current in targets)
             {
-                if (!current.TryGetTarget(out currentTarget))
+                if (!current.TryGetTarget(out var currentTarget))
                 {
                     s_targets.Remove(current);   
                 }
@@ -70,11 +71,9 @@ public static class AnimationNameMessanger
     {
         lock (s_lock)
         {
-            IAnimationNameMessangerTarget? currentTarget;
-
             var targets = s_targets.FindAll(currentWeakTarget => 
             {
-                if (!currentWeakTarget.TryGetTarget(out currentTarget))
+                if (!currentWeakTarget.TryGetTarget(out var currentTarget))
                 {
                     return false;
                 }
@@ -89,7 +88,7 @@ public static class AnimationNameMessanger
 
             foreach (var current in targets)
             {
-                if (current.TryGetTarget(out currentTarget))
+                if (current.TryGetTarget(out var currentTarget))
                 {
                     currentTarget.AnimationMessageReceive(AnimationName);
                 }
