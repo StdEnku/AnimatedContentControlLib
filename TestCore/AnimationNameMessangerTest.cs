@@ -10,7 +10,7 @@ public class AnimationNameMessangerTest
     // [状態]           : ダミーのIAnimationNameMessangerTarget型のオブジェクトを引数に渡しメソッド実行後
     // [想定される結果] : s_target静的変数に引数で渡したオブジェクトが追加される。
     [Fact]
-    public void Test1()
+    public void RegisterTarget_Test1()
     {
 
     }
@@ -19,7 +19,7 @@ public class AnimationNameMessangerTest
     // [状態]           : 
     // [想定される結果] : 
     [Fact]
-    public void Test2()
+    public void RegisterTarget_Test2()
     {
 
     }
@@ -28,7 +28,7 @@ public class AnimationNameMessangerTest
     // [状態]           : 
     // [想定される結果] : 
     [Fact]
-    public void Test3()
+    public void RegisterTarget_Test3()
     {
 
     }

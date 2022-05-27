@@ -96,4 +96,15 @@ public static class AnimationNameMessanger
             }
         }
     }
+
+    /// <summary>
+    /// 管理対象リスト(s_targets静的変数)を全消去する静的関数
+    /// </summary>
+    public static void Clear()
+    {
+        lock (s_lock)
+        {
+            s_targets.Clear();
+        }
+    }
 }
