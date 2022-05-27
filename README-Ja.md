@@ -9,7 +9,7 @@ WPFで使用可能なAnimatedContentControlコントロールを提供するラ�
 本ライブラリは二つのアセンブリから構成されている。
 | アセンブリ名                   | 備考                                                         |
 | ------------------------------ | ------------------------------------------------------------ |
-| AnimatedContentControlLib.Core | WPFに依存しないViewModelで使用可能な組み込みアニメーション名の定数を提供するアセンブリ |
+| AnimatedContentControlLib.Core | WPFに依存しないViewModelで使用可能な組み込みアニメーション名の定数やAnimationNameMessangerを提供するアセンブリ |
 | AnimatedContentControlLib.Wpf  | AnimatedContentControl本体を提供するアセンブリ               |
 
 ## インストール方法
@@ -253,3 +253,44 @@ public partial class MainWindow : Window
 ```
 
 ![ForReadme10](./Img/ForReadme10.gif)
+
+## バージョン2.x以降
+
+### AnimationNameMessanger実装
+
+View側のAnimatedContentControlの部分で
+AnimationNameMessangerKeyプロパティに
+オブジェクト識別用のキーを指定して
+
+```xaml
+<acl:AnimatedContentControl AnimationNameMessangerKey="オブジェクト識別用のキー"
+                            ~省略~/>
+```
+
+ViewModel側から下記のようにAnimationNameMessanger.SetAnimationName静的メソッドを
+呼び出すことでどこのViewModelからでも対象のAnimatedContentControlオブジェクトの
+CurrentStoryboardKeyプロパティを変更できるようになりました。
+
+```c#
+using Prism.Commands;
+using Prism.Mvvm;
+using Prism.Regions;
+using AnimatedContentControlLib.Core.Messengers;
+
+namespace Demo.ViewModels;
+
+internal class Control1ViewModel : ViewModelBase
+{
+    public Control1ViewModel(IRegionManager regionManager) : base(regionManager) { }
+
+    public override void OnNavigatedFrom(NavigationContext navigationContext)
+    {
+        AnimationNameMessanger.SetAnimationName(
+            "オブジェクト識別用のキー", 
+            "CurrentStoryboardKeyに代入されるアニメーション名");
+    }
+}
+```
+
+
+

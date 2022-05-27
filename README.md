@@ -12,7 +12,7 @@ This library consists of two assemblies.
 
 | assembly names                 | remarks                                                      |
 | ------------------------------ | ------------------------------------------------------------ |
-| AnimatedContentControlLib.Core | Assembly that provides constants for built-in animation names that can be used in WPF-independent ViewModel |
+| AnimatedContentControlLib.Core | Assembly that provides built-in animation name constants and AnimationNameMessanger that can be used in WPF-independent ViewModel |
 | AnimatedContentControlLib.Wpf  | Assembly that provides the AnimatedContentControl body       |
 
 ## Installation
@@ -253,3 +253,42 @@ public partial class MainWindow : Window
 ```
 
 ![ForReadme10](./Img/ForReadme10.gif)
+
+## Version 2.x or later
+
+### AnimationNameMessanger
+
+In the AnimatedContentControl part of the View side
+Specify a key for object identification in the AnimationNameMessangerKey property
+object identification key to the
+
+```xaml
+<acl:AnimatedContentControl AnimationNameMessangerKey="key for object identification"
+                            ~Etc~/>
+```
+
+SetAnimationName static method from the ViewModel side as follows
+SetAnimationName static method as shown below from the ViewModel side.
+CurrentStoryboardKey property of the target AnimatedContentControl object can now be changed from any ViewModel.
+
+```c#
+using Prism.Commands;
+using Prism.Mvvm;
+using Prism.Regions;
+using AnimatedContentControlLib.Core.Messengers;
+
+namespace Demo.ViewModels;
+
+internal class Control1ViewModel : ViewModelBase
+{
+    public Control1ViewModel(IRegionManager regionManager) : base(regionManager) { }
+
+    public override void OnNavigatedFrom(NavigationContext navigationContext)
+    {
+        AnimationNameMessanger.SetAnimationName(
+            "key for object identification", 
+            "Animation name assigned to CurrentStoryboardKey");
+    }
+}
+```
+
