@@ -23,32 +23,6 @@ public static class AnimationNameMessanger
         Clean();
     }
 
-    public static void RemoveTarget(IAnimationMessangerTarget target)
-    {
-        var weakTarget = s_targets.Find(currentWeakTarget => 
-        {
-            IAnimationMessangerTarget? currentTarget;
-            if (currentWeakTarget.TryGetTarget(out currentTarget))
-            {
-                return currentTarget == target;
-            }
-            else
-            {
-                return false;
-            }
-        });
-
-        if (weakTarget is null)
-        {
-            return;
-        }
-
-        lock(s_lock)
-        {
-            s_targets.Remove(weakTarget);
-        }
-    }
-
     public static void Clean()
     {
         lock (s_lock)

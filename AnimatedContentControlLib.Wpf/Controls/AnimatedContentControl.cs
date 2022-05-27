@@ -108,11 +108,7 @@ public class AnimatedContentControl : ContentControl, Messangers.IAnimationMessa
         set
         {
             this._animationNameMessangerKey = value;
-            if (value is null)
-            {
-                Messangers.AnimationNameMessanger.RemoveTarget(this);
-            }
-            else 
+            if (value is not null)
             {
                 Messangers.AnimationNameMessanger.RegisterTarget(this);
             }

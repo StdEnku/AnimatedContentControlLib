@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "Demo/1.0.0": {
         "dependencies": {
-          "AnimatedContentControlLib.Wpf": "1.0.3",
+          "AnimatedContentControlLib.Wpf": "2.0.0",
           "MaterialDesignThemes": "4.5.0",
           "Prism.DryIoc": "8.1.97"
         },
@@ -148,14 +148,14 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "AnimatedContentControlLib.Core/1.0.2": {
+      "AnimatedContentControlLib.Core/2.0.0": {
         "runtime": {
           "AnimatedContentControlLib.Core.dll": {}
         }
       },
-      "AnimatedContentControlLib.Wpf/1.0.3": {
+      "AnimatedContentControlLib.Wpf/2.0.0": {
         "dependencies": {
-          "AnimatedContentControlLib.Core": "1.0.2"
+          "AnimatedContentControlLib.Core": "2.0.0"
         },
         "runtime": {
           "AnimatedContentControlLib.Wpf.dll": {}
@@ -288,12 +288,12 @@
       "path": "system.threading.tasks/4.3.0",
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
     },
-    "AnimatedContentControlLib.Core/1.0.2": {
+    "AnimatedContentControlLib.Core/2.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "AnimatedContentControlLib.Wpf/1.0.3": {
+    "AnimatedContentControlLib.Wpf/2.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
