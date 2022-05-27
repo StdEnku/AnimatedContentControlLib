@@ -5,7 +5,7 @@
   },
   "projects": {
     "C:\\Users\\Syple\\デスクトップ\\AnimatedContentControlLib\\AnimatedContentControlLib.Core\\AnimatedContentControlLib.Core.csproj": {
-      "version": "1.0.2",
+      "version": "2.0.0",
       "restore": {
         "projectUniqueName": "C:\\Users\\Syple\\デスクトップ\\AnimatedContentControlLib\\AnimatedContentControlLib.Core\\AnimatedContentControlLib.Core.csproj",
         "projectName": "AnimatedContentControlLib.Core",
@@ -63,7 +63,7 @@
       }
     },
     "C:\\Users\\Syple\\デスクトップ\\AnimatedContentControlLib\\AnimatedContentControlLib.Wpf\\AnimatedContentControlLib.Wpf.csproj": {
-      "version": "1.0.3",
+      "version": "2.0.0",
       "restore": {
         "projectUniqueName": "C:\\Users\\Syple\\デスクトップ\\AnimatedContentControlLib\\AnimatedContentControlLib.Wpf\\AnimatedContentControlLib.Wpf.csproj",
         "projectName": "AnimatedContentControlLib.Wpf",

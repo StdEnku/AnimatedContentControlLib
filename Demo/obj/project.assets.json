@@ -207,7 +207,7 @@
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
       },
-      "AnimatedContentControlLib.Core/1.0.2": {
+      "AnimatedContentControlLib.Core/2.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
@@ -217,11 +217,11 @@
           "bin/placeholder/AnimatedContentControlLib.Core.dll": {}
         }
       },
-      "AnimatedContentControlLib.Wpf/1.0.3": {
+      "AnimatedContentControlLib.Wpf/2.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "AnimatedContentControlLib.Core": "1.0.2"
+          "AnimatedContentControlLib.Core": "2.0.0"
         },
         "compile": {
           "bin/placeholder/AnimatedContentControlLib.Wpf.dll": {}
@@ -992,12 +992,12 @@
         "system.threading.tasks.nuspec"
       ]
     },
-    "AnimatedContentControlLib.Core/1.0.2": {
+    "AnimatedContentControlLib.Core/2.0.0": {
       "type": "project",
       "path": "../AnimatedContentControlLib.Core/AnimatedContentControlLib.Core.csproj",
       "msbuildProject": "../AnimatedContentControlLib.Core/AnimatedContentControlLib.Core.csproj"
     },
-    "AnimatedContentControlLib.Wpf/1.0.3": {
+    "AnimatedContentControlLib.Wpf/2.0.0": {
       "type": "project",
       "path": "../AnimatedContentControlLib.Wpf/AnimatedContentControlLib.Wpf.csproj",
       "msbuildProject": "../AnimatedContentControlLib.Wpf/AnimatedContentControlLib.Wpf.csproj"
@@ -1005,7 +1005,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
-      "AnimatedContentControlLib.Wpf >= 1.0.3",
+      "AnimatedContentControlLib.Wpf >= 2.0.0",
       "MaterialDesignThemes >= 4.5.0",
       "Prism.DryIoc >= 8.1.97"
     ]

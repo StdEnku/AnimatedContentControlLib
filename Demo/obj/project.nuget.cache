@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "qxRoNQBVpWB0FUY86kAvnXxBRAsOwywrEWojThvWZpT8AgqjMxgNxLvzCwk/poDNcCiExB1Vi0G/1t7fgx2v8A==",
+  "dgSpecHash": "JFP5Sbx5jikzQtCLGF4gugBZa9qaN5EIxoWCf3vqxb7dsHoBcLYfiVC8/QObg/2FdGJhUlHoRiFpN6TmXKcOHw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Syple\\デスクトップ\\AnimatedContentControlLib\\Demo\\Demo.csproj",
   "expectedPackageFiles": [
@@ -20,9 +20,7 @@
     "C:\\Users\\Syple\\.nuget\\packages\\system.reflection.primitives\\4.3.0\\system.reflection.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Syple\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
     "C:\\Users\\Syple\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
-    "C:\\Users\\Syple\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
-    "C:\\Users\\Syple\\.nuget\\packages\\animatedcontentcontrollib.core\\1.0.2\\animatedcontentcontrollib.core.1.0.2.nupkg.sha512",
-    "C:\\Users\\Syple\\.nuget\\packages\\animatedcontentcontrollib.wpf\\1.0.3\\animatedcontentcontrollib.wpf.1.0.3.nupkg.sha512"
+    "C:\\Users\\Syple\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }
