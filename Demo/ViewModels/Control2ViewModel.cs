@@ -15,7 +15,7 @@ internal class Control2ViewModel : ViewModelBase
     {
         var toViewName = navigationContext.Uri.ToString();
         var nextAnimName = toViewName == Config.Default.Control1ViewRegionName ? Constants.EmbededAnimations.SlideinRight :
-                           toViewName == Config.Default.Control3ViewRegionName ? Constants.EmbededAnimations.SlideinLeft :
+                           toViewName == Config.Default.Control3ViewRegionName ? Constants.EmbededAnimations.SlideinUp :
                            null;
 
         Messangers.AnimationNameMessanger.SetAnimationName("PrimaryContent.AnimationMessageKey", nextAnimName);

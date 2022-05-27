@@ -13,8 +13,11 @@ internal class Control4ViewModel : ViewModelBase
 
     public override void OnNavigatedFrom(NavigationContext navigationContext)
     {
-        Messangers.AnimationNameMessanger.SetAnimationName(
-            "PrimaryContent.AnimationMessageKey", 
-            Constants.EmbededAnimations.SlideinRight);
+        var toViewName = navigationContext.Uri.ToString();
+        var nextAnimName = toViewName == Config.Default.Control3ViewRegionName ? Constants.EmbededAnimations.ModernSlideinRight :
+                           toViewName == Config.Default.Control5ViewRegionName ? Constants.EmbededAnimations.ModernSlideinUp :
+                           null;
+
+        Messangers.AnimationNameMessanger.SetAnimationName("PrimaryContent.AnimationMessageKey", nextAnimName);
     }
 }

@@ -29,5 +29,8 @@
     <Setting Name="Control4ViewRegionName" Type="System.String" Scope="User">
       <Value Profile="(Default)">AnimatedContentControl.Control4View</Value>
     </Setting>
+    <Setting Name="Control5ViewRegionName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">AnimatedContentControl.Control5View</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

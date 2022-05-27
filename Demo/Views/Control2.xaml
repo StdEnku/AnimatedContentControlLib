@@ -16,7 +16,10 @@
         </Grid.RowDefinitions>
 
         <Viewbox Grid.ColumnSpan="2">
-            <Label Content="Control2" />
+            <StackPanel>
+                <Label Content="SlideinUp→" />
+                <Label Content="←SlideinRight" />
+            </StackPanel>
         </Viewbox>
 
         <Button Content="Back" 

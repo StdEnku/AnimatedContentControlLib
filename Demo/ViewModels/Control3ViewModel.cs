@@ -14,8 +14,8 @@ internal class Control3ViewModel : ViewModelBase
     public override void OnNavigatedFrom(NavigationContext navigationContext)
     {
         var toViewName = navigationContext.Uri.ToString();
-        var nextAnimName = toViewName == Config.Default.Control2ViewRegionName ? Constants.EmbededAnimations.SlideinRight :
-                           toViewName == Config.Default.Control4ViewRegionName ? Constants.EmbededAnimations.SlideinLeft :
+        var nextAnimName = toViewName == Config.Default.Control2ViewRegionName ? Constants.EmbededAnimations.SlideinDown :
+                           toViewName == Config.Default.Control4ViewRegionName ? Constants.EmbededAnimations.ModernSlideinLeft :
                            null;
 
         Messangers.AnimationNameMessanger.SetAnimationName("PrimaryContent.AnimationMessageKey", nextAnimName);

@@ -16,14 +16,20 @@
         </Grid.RowDefinitions>
 
         <Viewbox Grid.ColumnSpan="2">
-            <Label Content="Control4" />
+            <StackPanel>
+                <Label Content="ModernSlideinUp→" />
+                <Label Content="←ModernSlideinRight" />
+            </StackPanel>
         </Viewbox>
 
         <Button Content="Back" 
                 Command="{Binding NavigateCmd}" 
                 CommandParameter="{Binding Source={x:Static config:Settings.Default}, Path=Control3ViewRegionName}" 
                 Grid.Column="0" Grid.Row="1" Margin="5" />
-        
-        <Button Content="Next" IsEnabled="False" Grid.Column="1" Grid.Row="1" Margin="5" />
+
+        <Button Content="Next"
+                Command="{Binding NavigateCmd}" 
+                CommandParameter="{Binding Source={x:Static config:Settings.Default}, Path=Control5ViewRegionName}" 
+                Grid.Column="1" Grid.Row="1" Margin="5" />
     </Grid>
 </UserControl>

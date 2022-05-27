@@ -18,6 +18,7 @@ namespace Demo
             containerRegistry.RegisterForNavigation<Control2>(Config.Default.Control2ViewRegionName);
             containerRegistry.RegisterForNavigation<Control3>(Config.Default.Control3ViewRegionName);
             containerRegistry.RegisterForNavigation<Control4>(Config.Default.Control4ViewRegionName);
+            containerRegistry.RegisterForNavigation<Control5>(Config.Default.Control5ViewRegionName);
         }
     }
 }
