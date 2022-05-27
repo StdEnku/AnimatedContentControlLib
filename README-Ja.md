@@ -1,6 +1,6 @@
 # ![Header](./Img/Header.png)
 
-[![Build&Test](https://github.com/StdEnku/AnimatedContentControlLib/actions/workflows/Build&Test.yml/badge.svg)](https://github.com/StdEnku/AnimatedContentControlLib/actions/workflows/Build&Test.yml)
+[![Build&Test](https://github.com/StdEnku/AnimatedContentControlLib/actions/workflows/Build&Test.yml/badge.svg)](https://github.com/StdEnku/AnimatedContentControlLib/actions/workflows/Build&Test.yml)  <img src="https://img.shields.io/badge/6-Dot%20net-5C2D91.svg?logo=dot-net&style=popout"> <img src="https://img.shields.io/badge/-MIT%20License-666666.svg?logo=&style=popout-square">
 
 ## 概要
 
