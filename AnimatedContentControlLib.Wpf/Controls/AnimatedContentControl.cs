@@ -7,6 +7,9 @@ using Messangers = AnimatedContentControlLib.Core.Messengers;
 
 namespace AnimatedContentControlLib.Wpf.Controls;
 
+/// <summary>
+/// Contentプロパティが変化した際指定したアニメーションを実行可能なコントロール
+/// </summary>
 public class AnimatedContentControl : ContentControl, Messangers.IAnimationNameMessangerTarget
 {
     #region 定数
@@ -15,11 +18,22 @@ public class AnimatedContentControl : ContentControl, Messangers.IAnimationNameM
     #endregion
 
     #region プロパティ
+    /// <summary>
+    /// テンプレート内のSubImageで使用するX方向のDpi
+    /// </summary>
     public double DpiX { get; set; } = 96.0;
+
+    /// <summary>
+    /// テンプレート内のSubImageで使用するY方向のDpi
+    /// </summary>
     public double DpiY { get; set; } = 96.0;
     #endregion
 
     #region CurrentStoryboardKey依存関係プロパティ
+    /// <summary>
+    /// 次回Contentプロパティが変化した際実行される
+    /// アニメーション名用依存関係プロパティ
+    /// </summary>
     public static readonly DependencyProperty CurrentStoryboardKeyProperty
         = DependencyProperty.Register(
             "CurrentStoryboardKey",
@@ -28,6 +42,9 @@ public class AnimatedContentControl : ContentControl, Messangers.IAnimationNameM
             new PropertyMetadata(null)
         );
 
+    /// <summary>
+    /// CurrentStoryboardKeyProperty依存関係プロパティに対応するClrプロパティ
+    /// </summary>
     public string? CurrentStoryboardKey
     {
         get => (string?)this.GetValue(CurrentStoryboardKeyProperty);
@@ -53,6 +70,9 @@ public class AnimatedContentControl : ContentControl, Messangers.IAnimationNameM
     #endregion
 
     #region Storyboards依存関係プロパティ
+    /// <summary>
+    /// 自作アニメーションを登録するためのStoryboardのリスト
+    /// </summary>
     public static readonly DependencyProperty StoryboardsProperty
         = DependencyProperty.Register(
             "Storyboards",
@@ -61,6 +81,9 @@ public class AnimatedContentControl : ContentControl, Messangers.IAnimationNameM
             new PropertyMetadata(new StoryBoardList())
         );
 
+    /// <summary>
+    /// StoryboardsProperty依存関係プロパティに対応するClrプロパティ
+    /// </summary>
     public StoryBoardList Storyboards
     {
         get => (StoryBoardList)this.GetValue(StoryboardsProperty);
@@ -69,6 +92,9 @@ public class AnimatedContentControl : ContentControl, Messangers.IAnimationNameM
     #endregion
 
     #region IsAnimationCompleted依存関係プロパティ
+    /// <summary>
+    /// アニメーションが終了しているかどうかを示す依存関係プロパティ
+    /// </summary>
     public static readonly DependencyProperty IsAnimationCompletedProperty
         = DependencyProperty.Register(
             "IsAnimationCompleted",
@@ -77,6 +103,9 @@ public class AnimatedContentControl : ContentControl, Messangers.IAnimationNameM
             new PropertyMetadata(true)
         );
 
+    /// <summary>
+    /// IsAnimationCompletedProperty依存関係プロパティに対応するClrプロパティ
+    /// </summary>
     public bool IsAnimationCompleted
     {
         get => (bool)this.GetValue(IsAnimationCompletedProperty);
@@ -85,6 +114,10 @@ public class AnimatedContentControl : ContentControl, Messangers.IAnimationNameM
     #endregion
 
     #region 添付プロパティ
+    /// <summary>
+    /// Storyboards依存関係プロパティ内のStoryboardに添付して
+    /// CurrentStoryboardKeyで特定できるようにするための添付プロパティ
+    /// </summary>
     public static readonly DependencyProperty KeyProperty
         = DependencyProperty.RegisterAttached(
             "Key",
@@ -93,15 +126,29 @@ public class AnimatedContentControl : ContentControl, Messangers.IAnimationNameM
             new PropertyMetadata(null)
         );
 
+    /// <summary>
+    /// KeyProperty添付プロパティのセッター
+    /// </summary>
+    /// <param name="obj">Key添付プロパティが添付されたDependencyObject</param>
+    /// <param name="value">キー文字列</param>
     public static void SetKey(DependencyObject obj, string value)
         => obj.SetValue(KeyProperty, value);
 
+    /// <summary>
+    /// KeyProperty添付プロパティのゲッター
+    /// </summary>
+    /// <param name="obj">Key添付プロパティが添付されたDependencyObject</param>
+    /// <returns>キー文字列</returns>
     public static string GetKey(DependencyObject obj)
         => (string)obj.GetValue(KeyProperty);
     #endregion
 
     #region IAnimationMessangerTargetの実装
     private string? _animationNameMessangerKey = null;
+
+    /// <summary>
+    /// AnimationNameMessangerで自身を特定するためのキー文字列
+    /// </summary>
     public string? AnimationNameMessangerKey
     { 
         get => this._animationNameMessangerKey; 
@@ -115,6 +162,10 @@ public class AnimatedContentControl : ContentControl, Messangers.IAnimationNameM
         }
     }
 
+    /// <summary>
+    /// メッセージが届いた際実行されるメソッド
+    /// </summary>
+    /// <param name="nextAnimationName"></param>
     public void AnimationMessageReceive(string? nextAnimationName)
     {
         this.CurrentStoryboardKey = nextAnimationName;

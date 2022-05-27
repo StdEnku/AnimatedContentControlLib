@@ -6,11 +6,25 @@ using System.Threading.Tasks;
 
 namespace AnimatedContentControlLib.Core.Messengers;
 
+/// <summary>
+/// AnimatedContentControlのCurrentStoryboardKeyプロパティを
+/// どこからでも変更できるようにするための
+/// メッセンジャーパターンを含む静的クラス
+/// 登録したオブジェクトは弱参照で管理されます。
+/// </summary>
 public static class AnimationNameMessanger
 {
     private static List<WeakReference<IAnimationNameMessangerTarget>> s_targets = new();
     private static object s_lock = new();
 
+    /// <summary>
+    /// 対象のIAnimationNameMessangerTargetオブジェクトを
+    /// メッセンジャーに登録する静的関数
+    /// </summary>
+    /// <remarks>
+    /// 追加処理後にCleanメソッドが実行される。
+    /// </remarks>
+    /// <param name="target">登録したいオブジェクト</param>
     public static void RegisterTarget(IAnimationNameMessangerTarget target)
     {
         var weakTarget = new WeakReference<IAnimationNameMessangerTarget>(target);
@@ -23,6 +37,13 @@ public static class AnimationNameMessanger
         Clean();
     }
 
+    /// <summary>
+    /// 登録済みのオブジェクトの参照が切れてる場合
+    /// 管理対象リスト(s_targets静的変数)から除外する。
+    /// </summary>
+    /// <remarks>
+    /// このメソッドを実行しても監視対象リストがクリアされる事はありません。
+    /// </remarks>
     public static void Clean()
     {
         lock (s_lock)
@@ -39,7 +60,13 @@ public static class AnimationNameMessanger
         }
     }
 
-    public static void SetAnimationName(string messangerKey, string? AnimationName)
+    /// <summary>
+    /// 指定したAnimatedContentControlの
+    /// CurrentStoryboardKeyプロパティを変更する。
+    /// </summary>
+    /// <param name="aimationNameMessangerKey">対象とするオブジェクトのAimationNameMessangerKeyプロパティ</param>
+    /// <param name="AnimationName">変更後のアニメーション名</param>
+    public static void SetAnimationName(string aimationNameMessangerKey, string? AnimationName)
     {
         lock (s_lock)
         {
@@ -57,7 +84,7 @@ public static class AnimationNameMessanger
                     return false;
                 }
                 
-                return currentTarget.AnimationNameMessangerKey == messangerKey;
+                return currentTarget.AnimationNameMessangerKey == aimationNameMessangerKey;
             });
 
             foreach (var current in targets)
