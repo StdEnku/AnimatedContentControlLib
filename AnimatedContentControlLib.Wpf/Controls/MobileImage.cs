@@ -4,9 +4,22 @@ using System.Windows.Media;
 
 namespace AnimatedContentControlLib.Wpf.Controls;
 
+/// <summary>
+/// ActualHeightやActualWidthへ比率で
+/// Transform系の各種プロパティを変更できるようにした
+/// Imageクラス
+/// </summary>
+/// <remarks>
+/// このクラスをStoryboardからではなく
+/// 直接使用する事を作者は想定していません。
+/// </remarks>
 public class MobileImage : Image
 {
     #region XPosFromWidthRethioProperty依存関係プロパティ
+    /// <summary>
+    /// TranslateTransform.XプロパティをActualWidthの比率で
+    /// 指定できるようにするための依存関係プロパティ
+    /// </summary>
     public static readonly DependencyProperty XPosFromWidthRethioProperty
         = DependencyProperty.Register(
             "XPosFromWidthRethio",
@@ -21,6 +34,9 @@ public class MobileImage : Image
         mobileImage._translate.X = mobileImage.ActualWidth * (double)e.NewValue;
     }
 
+    /// <summary>
+    /// XPosFromWidthRethioProperty依存関係プロパティに対応するClrプロパティ
+    /// </summary>
     public double XPosFromWidthRethio
     {
         set => this.SetValue(XPosFromWidthRethioProperty, value);
@@ -28,6 +44,10 @@ public class MobileImage : Image
     #endregion
 
     #region YPosFromHeightRethioProperty依存関係プロパティ
+    /// <summary>
+    /// TranslateTransform.YプロパティをActualHeightの比率で
+    /// 指定できるようにするための依存関係プロパティ
+    /// </summary>
     public static readonly DependencyProperty YPosFromHeightRethioProperty
         = DependencyProperty.Register(
             "YPosFromHeightRethio",
@@ -42,6 +62,9 @@ public class MobileImage : Image
         mobileImage._translate.Y = mobileImage.ActualHeight * (double)e.NewValue;
     }
 
+    /// <summary>
+    /// YPosFromHeightRethioProperty依存関係プロパティに対応するClrプロパティ
+    /// </summary>
     public double YPosFromHeightRethio
     {
         set => this.SetValue(YPosFromHeightRethioProperty, value);
@@ -49,6 +72,10 @@ public class MobileImage : Image
     #endregion
 
     #region RotateXCenterFromWidthRethioProperty依存関係プロパティ
+    /// <summary>
+    /// RotateTransform.CenterXプロパティをActualWidthの比率で
+    /// 指定できるようにするための依存関係プロパティ
+    /// </summary>
     public static readonly DependencyProperty RotateXCenterFromWidthRethioProperty
         = DependencyProperty.Register(
             "RotateXCenterFromWidthRethio",
@@ -63,6 +90,9 @@ public class MobileImage : Image
         mobileImager._rotate.CenterX = mobileImager.ActualWidth * (double)e.NewValue;
     }
 
+    /// <summary>
+    /// RotateXCenterFromWidthRethioProperty依存関係プロパティに対応するClrプロパティ
+    /// </summary>
     public double RotateXCenterFromWidthRethio
     {
         set => this.SetValue(RotateXCenterFromWidthRethioProperty, value);
@@ -70,6 +100,10 @@ public class MobileImage : Image
     #endregion
 
     #region RotateYCenterFromWidthRethioProperty依存関係プロパティ
+    /// <summary>
+    /// RotateTransform.CenterYプロパティをActualHeightの比率で
+    /// 指定できるようにするための依存関係プロパティ
+    /// </summary>
     public static readonly DependencyProperty RotateYCenterFromHeightRethioProperty
         = DependencyProperty.Register(
             "RotateYCenterFromHeightRethio",
@@ -84,6 +118,9 @@ public class MobileImage : Image
         mobileImager._rotate.CenterY = mobileImager.ActualHeight * (double)e.NewValue;
     }
 
+    /// <summary>
+    /// RotateYCenterFromWidthRethioProperty依存関係プロパティに対応するClrプロパティ
+    /// </summary>
     public double RotateYCenterFromHeightRethio
     {
         set => this.SetValue(RotateYCenterFromHeightRethioProperty, value);
@@ -91,6 +128,10 @@ public class MobileImage : Image
     #endregion
 
     #region ScaleXCenterFromWidthRethioProperty依存関係プロパティ
+    /// <summary>
+    /// ScaleTransform.CenterXプロパティをActualWidthの比率で
+    /// 指定できるようにするための依存関係プロパティ
+    /// </summary>
     public static readonly DependencyProperty ScaleXCenterFromWidthRethioProperty
         = DependencyProperty.Register(
             "ScaleXCenterFromWidthRethio",
@@ -105,6 +146,9 @@ public class MobileImage : Image
         mobileImager._scale.CenterX = mobileImager.ActualWidth * (double)e.NewValue;
     }
 
+    /// <summary>
+    /// ScaleXCenterFromWidthRethioProperty依存関係プロパティに対応するClrプロパティ
+    /// </summary>
     public double ScaleXCenterFromWidthRethio
     {
         set => this.SetValue(ScaleXCenterFromWidthRethioProperty, value);
@@ -112,6 +156,10 @@ public class MobileImage : Image
     #endregion
 
     #region ScaleYCenterFromHeightRethioProperty依存関係プロパティ
+    /// <summary>
+    /// ScaleTransform.CenterYプロパティをActualHeightの比率で
+    /// 指定できるようにするための依存関係プロパティ
+    /// </summary>
     public static readonly DependencyProperty ScaleYCenterFromHeightRethioProperty
         = DependencyProperty.Register(
             "ScaleYCenterFromHeightRethio",
@@ -126,6 +174,9 @@ public class MobileImage : Image
         mobileImager._scale.CenterY = mobileImager.ActualHeight * (double)e.NewValue;
     }
 
+    /// <summary>
+    /// ScaleYCenterFromHeightRethioProperty依存関係プロパティに対応するClrプロパティ
+    /// </summary>
     public double ScaleYCenterFromHeightRethio
     {
         set => this.SetValue(ScaleYCenterFromHeightRethioProperty, value);
@@ -144,6 +195,9 @@ public class MobileImage : Image
     private RotateTransform _rotate = new();
     private TranslateTransform _translate = new();
 
+    /// <summary>
+    /// デフォルトコンストラクタ
+    /// </summary>
     public MobileImage()
     {
         var transformGroup = new TransformGroup();
