@@ -1,33 +1,8 @@
 name: Build&Test
 
-on:
-  push:
-    tags-ignore:
-      - 'v*'
-    branches:
-      - '**'
-    paths-ignore:
-      - '**/*.md'
-      - '**/.gitignore'
-      - '**/Doxyfile'
-      - '.github/**'
-  pull_request:
-    branches:
-      - '**'
-    paths-ignore:
-      - '**/*.md'
-      - '**/.gitignore'
-      - '**/Doxyfile'
-      - '.github/**'
+on: [push]
 
 jobs:
-  #===========================================================================
-  #  ここからビルドとテストを実行しカバレッジ情報をcodecovへ送信するのジョブ
-  #  pullかpull request発生で実行される。
-  #  vから始まるタグのプッシュ時は実行されない。
-  #  また、mdファイル,ワークフローファイル,.gitignoreファイル,Doxyfile
-  #  のみの変更でも実行されない。
-  #===========================================================================
   BuildAndTest:
     runs-on:
       windows-latest
