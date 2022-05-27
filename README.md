@@ -2,6 +2,8 @@
 
 [日本語版README.md](https://github.com/StdEnku/AnimatedContentControlLib/blob/main/README-Ja.md)
 
+[![Build&Test](https://github.com/StdEnku/AnimatedContentControlLib/actions/workflows/Build&Test.yml/badge.svg)](https://github.com/StdEnku/AnimatedContentControlLib/actions/workflows/Build&Test.yml)
+
 ## Summary
 
 This library enables the execution of home-made animations and built-in standard animations when the Content property is changed.

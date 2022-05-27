@@ -1,5 +1,7 @@
 # ![Header](./Img/Header.png)
 
+[![Build&Test](https://github.com/StdEnku/AnimatedContentControlLib/actions/workflows/Build&Test.yml/badge.svg)](https://github.com/StdEnku/AnimatedContentControlLib/actions/workflows/Build&Test.yml)
+
 ## 概要
 
 本ライブラリはContentプロパティ変更時に自作したアニメーションや
