@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimatedContentControlLib.C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimatedContentControlLib.Wpf", "AnimatedContentControlLib.Wpf\AnimatedContentControlLib.Wpf.csproj", "{E6A392D3-20FD-412A-AF9B-B92347F2FB12}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example", "Example\Example.csproj", "{C5A3778D-F96D-4497-B7B6-92F73FBC4E67}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo.csproj", "{44979068-7390-456A-B25B-80373EC9827A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{E6A392D3-20FD-412A-AF9B-B92347F2FB12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6A392D3-20FD-412A-AF9B-B92347F2FB12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6A392D3-20FD-412A-AF9B-B92347F2FB12}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C5A3778D-F96D-4497-B7B6-92F73FBC4E67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C5A3778D-F96D-4497-B7B6-92F73FBC4E67}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C5A3778D-F96D-4497-B7B6-92F73FBC4E67}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C5A3778D-F96D-4497-B7B6-92F73FBC4E67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44979068-7390-456A-B25B-80373EC9827A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44979068-7390-456A-B25B-80373EC9827A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44979068-7390-456A-B25B-80373EC9827A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44979068-7390-456A-B25B-80373EC9827A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
