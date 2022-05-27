@@ -10,7 +10,7 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl></RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <Description>Library that provides constants containing built-in animation names that can be used with AnimatedContentControl; independent of UI framework and can be used with ViewModel</Description>
+    <Description>Assembly that provides built-in animation name constants and AnimationNameMessanger that can be used in WPF-independent ViewModel</Description>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	<Version>2.0.0</Version>
   </PropertyGroup>
