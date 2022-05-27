@@ -17,5 +17,20 @@
     <Setting Name="MainWindowState" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
+    <Setting Name="Control1ViewRegionName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">AnimatedContentControl.Control1View</Value>
+    </Setting>
+    <Setting Name="Control2ViewRegionName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">AnimatedContentControl.Control2View</Value>
+    </Setting>
+    <Setting Name="Control3ViewRegionName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">AnimatedContentControl.Control3View</Value>
+    </Setting>
+    <Setting Name="Control4ViewRegionName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">AnimatedContentControl.Control4View</Value>
+    </Setting>
+    <Setting Name="PrimaryRegionName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">AnimatedContentControl.PrimaryRegion</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -8,97 +8,138 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Demo.Properties
-{
-
-
+namespace Demo.Properties {
+    
+    
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.2.0.0")]
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase
-    {
-
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
-
-        public static Settings Default
-        {
-            get
-            {
+        
+        public static Settings Default {
+            get {
                 return defaultInstance;
             }
         }
-
+        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("350")]
-        public double MainWindowHeight
-        {
-            get
-            {
+        public double MainWindowHeight {
+            get {
                 return ((double)(this["MainWindowHeight"]));
             }
-            set
-            {
+            set {
                 this["MainWindowHeight"] = value;
             }
         }
-
+        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("525")]
-        public double MainWindowWidth
-        {
-            get
-            {
+        public double MainWindowWidth {
+            get {
                 return ((double)(this["MainWindowWidth"]));
             }
-            set
-            {
+            set {
                 this["MainWindowWidth"] = value;
             }
         }
-
+        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("200")]
-        public double MainWindowLeft
-        {
-            get
-            {
+        public double MainWindowLeft {
+            get {
                 return ((double)(this["MainWindowLeft"]));
             }
-            set
-            {
+            set {
                 this["MainWindowLeft"] = value;
             }
         }
-
+        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("100")]
-        public double MainWindowTop
-        {
-            get
-            {
+        public double MainWindowTop {
+            get {
                 return ((double)(this["MainWindowTop"]));
             }
-            set
-            {
+            set {
                 this["MainWindowTop"] = value;
             }
         }
-
+        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int MainWindowState
-        {
-            get
-            {
+        public int MainWindowState {
+            get {
                 return ((int)(this["MainWindowState"]));
             }
-            set
-            {
+            set {
                 this["MainWindowState"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("AnimatedContentControl.Control1View")]
+        public string Control1ViewRegionName {
+            get {
+                return ((string)(this["Control1ViewRegionName"]));
+            }
+            set {
+                this["Control1ViewRegionName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("AnimatedContentControl.Control2View")]
+        public string Control2ViewRegionName {
+            get {
+                return ((string)(this["Control2ViewRegionName"]));
+            }
+            set {
+                this["Control2ViewRegionName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("AnimatedContentControl.Control3View")]
+        public string Control3ViewRegionName {
+            get {
+                return ((string)(this["Control3ViewRegionName"]));
+            }
+            set {
+                this["Control3ViewRegionName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("AnimatedContentControl.Control4View")]
+        public string Control4ViewRegionName {
+            get {
+                return ((string)(this["Control4ViewRegionName"]));
+            }
+            set {
+                this["Control4ViewRegionName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("AnimatedContentControl.PrimaryRegion")]
+        public string PrimaryRegionName {
+            get {
+                return ((string)(this["PrimaryRegionName"]));
+            }
+            set {
+                this["PrimaryRegionName"] = value;
             }
         }
     }

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\Syple\デスクトップ\AnimatedContentControlLib\Demo\App.xaml
-1-1644662438
+5-2033621038
 
-41156034690
+13-500476253
 203289067473
-Views\MainWindow.xaml;
+Views\Control1.xaml;Views\Control2.xaml;Views\Control3.xaml;Views\Control4.xaml;Views\MainWindow.xaml;
 
 False
 

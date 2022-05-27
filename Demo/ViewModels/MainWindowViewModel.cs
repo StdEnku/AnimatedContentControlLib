@@ -5,13 +5,18 @@ using Prism.Regions;
 
 namespace Demo.ViewModels
 {
-    public class MainWindowViewModel : BindableBase
+    internal class MainWindowViewModel : ViewModelBase
     {
-        private IRegionManager _regionManager;
+        public MainWindowViewModel(IRegionManager regionManager) : base(regionManager) { }
 
-        public MainWindowViewModel(IRegionManager regionManager)
+        public override void OnNavigatedFrom(NavigationContext navigationContext)
         {
-            this._regionManager = regionManager;
+
+        }
+
+        public override void OnNavigatedTo(NavigationContext navigationContext)
+        {
+
         }
     }
 }

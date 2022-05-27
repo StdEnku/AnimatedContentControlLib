@@ -5,6 +5,7 @@
         xmlns:prism="http://prismlibrary.com/"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:acl="http://AnimatedContentControlLib/Wpf/"
+        xmlns:config="clr-namespace:Demo.Properties"
         xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         Background="{DynamicResource MaterialDesignPaper}"
@@ -32,6 +33,12 @@
                       UseAeroCaptionButtons="False"/>
     </WindowChrome.WindowChrome>
     <!--#endregion-->
+
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding NavigateCmd}" CommandParameter="{Binding Source={x:Static config:Settings.Default}, Path=Control1ViewRegionName}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
 
     <Grid>
         <Grid.RowDefinitions>
@@ -101,8 +108,8 @@
         <!--#endregion-->
 
         <!--下記メインコンテンツ-->
-        <Viewbox Grid.Row="1">
-            <Label Content="Hello World" />
-        </Viewbox>
+        <acl:AnimatedContentControl Grid.Row="1" 
+                                    CurrentStoryboardKey="SlideinLeft"
+                                    prism:RegionManager.RegionName="{Binding Source={x:Static config:Settings.Default}, Path=PrimaryRegionName}"/>
     </Grid>
 </Window>
