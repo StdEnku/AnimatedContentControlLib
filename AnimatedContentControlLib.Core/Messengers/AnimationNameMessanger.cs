@@ -67,30 +67,32 @@ public static class AnimationNameMessanger
     /// </summary>
     /// <param name="aimationNameMessangerKey">対象とするオブジェクトのAimationNameMessangerKeyプロパティ</param>
     /// <param name="AnimationName">変更後のアニメーション名</param>
-    public static void SetAnimationName(string aimationNameMessangerKey, string? AnimationName)
+    public static void SetAnimationName(string aimationNameMessangerKey, string? animationName)
     {
         lock (s_lock)
         {
             var targets = s_targets.FindAll(currentWeakTarget => 
             {
-                if (!currentWeakTarget.TryGetTarget(out var currentTarget))
+                if (currentWeakTarget.TryGetTarget(out var currentTarget))
                 {
-                    return false;
-                }
+                    if (currentTarget is null)
+                    {
+                        return false;
+                    }
 
-                if (currentTarget.AnimationNameMessangerKey is null)
+                    return currentTarget.AnimationNameMessangerKey == aimationNameMessangerKey;
+                }
+                else
                 {
                     return false;
-                }
-                
-                return currentTarget.AnimationNameMessangerKey == aimationNameMessangerKey;
+                }                
             });
 
-            foreach (var current in targets)
+            foreach (var currentWeak in targets)
             {
-                if (current.TryGetTarget(out var currentTarget))
+                if (currentWeak.TryGetTarget(out var currentTarget))
                 {
-                    currentTarget.AnimationMessageReceive(AnimationName);
+                    currentTarget.AnimationMessageReceive(animationName);
                 }
             }
         }

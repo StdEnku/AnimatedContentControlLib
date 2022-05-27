@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Prism.Mvvm;
+﻿using Prism.Mvvm;
 using Prism.Commands;
-using Prism.Navigation;
 using Prism.Regions;
-using Config = Demo.Properties.Settings;
 
 namespace Demo.ViewModels;
 
