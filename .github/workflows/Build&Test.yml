@@ -1,0 +1,47 @@
+name: Build&Test
+
+on:
+  push:
+    tags-ignore:
+      - 'v*'
+    branches:
+      - '**'
+    paths-ignore:
+      - '**/*.md'
+      - '**/.gitignore'
+      - '**/Doxyfile'
+      - '.github/**'
+  pull_request:
+    branches:
+      - '**'
+    paths-ignore:
+      - '**/*.md'
+      - '**/.gitignore'
+      - '**/Doxyfile'
+      - '.github/**'
+
+jobs:
+  #===========================================================================
+  #  ここからビルドとテストを実行しカバレッジ情報をcodecovへ送信するのジョブ
+  #  pullかpull request発生で実行される。
+  #  vから始まるタグのプッシュ時は実行されない。
+  #  また、mdファイル,ワークフローファイル,.gitignoreファイル,Doxyfile
+  #  のみの変更でも実行されない。
+  #===========================================================================
+  BuildAndTest:
+    runs-on:
+      windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install .NET Core
+        uses: actions/setup-dotnet@v1
+        with: 
+          dotnet-version: 6.0.x
+
+      - name: Build with dotnet
+        run: dotnet build 
+
+      - name: Execute unit tests
+        run: dotnet test -c Debug
