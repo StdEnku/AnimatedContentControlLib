@@ -1,7 +1,9 @@
-﻿using AnimatedContentControlLib.Core.Constants;
-using Prism.Commands;
+﻿using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Regions;
+using Messangers = AnimatedContentControlLib.Core.Messengers;
+using Constants = AnimatedContentControlLib.Core.Constants;
+using Config = Demo.Properties.Settings;
 
 namespace Demo.ViewModels;
 
@@ -11,11 +13,8 @@ internal class Control4ViewModel : ViewModelBase
 
     public override void OnNavigatedFrom(NavigationContext navigationContext)
     {
-
-    }
-
-    public override void OnNavigatedTo(NavigationContext navigationContext)
-    {
-
+        Messangers.AnimationNameMessanger.SetAnimationName(
+            "PrimaryContent.AnimationMessageKey", 
+            Constants.EmbededAnimations.SlideinRight);
     }
 }

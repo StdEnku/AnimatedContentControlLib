@@ -22,7 +22,7 @@ internal class ViewModelBase : BindableBase, INavigationAware
 
     public DelegateCommand<string> NavigateCmd => new((nextViewName) => 
     {
-        this._regionManager.RequestNavigate(Config.Default.PrimaryRegionName, nextViewName);
+        this._regionManager.RequestNavigate("PrimaryContent", nextViewName);
     });
 
     public bool IsNavigationTarget(NavigationContext navigationContext) => false;

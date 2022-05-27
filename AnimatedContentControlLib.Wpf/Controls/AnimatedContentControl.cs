@@ -3,10 +3,11 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using Messangers = AnimatedContentControlLib.Core.Messengers;
 
 namespace AnimatedContentControlLib.Wpf.Controls;
 
-public class AnimatedContentControl : ContentControl
+public class AnimatedContentControl : ContentControl, Messangers.IAnimationMessangerTarget
 {
     #region 定数
     private const string IMAGE_IN_TEMPLATE_NAME = "SecondaryImage";
@@ -97,6 +98,31 @@ public class AnimatedContentControl : ContentControl
 
     public static string GetKey(DependencyObject obj)
         => (string)obj.GetValue(KeyProperty);
+    #endregion
+
+    #region IAnimationMessangerTargetの実装
+    private string? _animationNameMessangerKey = null;
+    public string? AnimationNameMessangerKey
+    { 
+        get => this._animationNameMessangerKey; 
+        set
+        {
+            this._animationNameMessangerKey = value;
+            if (value is null)
+            {
+                Messangers.AnimationNameMessanger.RemoveTarget(this);
+            }
+            else 
+            {
+                Messangers.AnimationNameMessanger.RegisterTarget(this);
+            }
+        }
+    }
+
+    public void AnimationMessageReceive(string? nextAnimationName)
+    {
+        this.CurrentStoryboardKey = nextAnimationName;
+    }
     #endregion
 
     static AnimatedContentControl()

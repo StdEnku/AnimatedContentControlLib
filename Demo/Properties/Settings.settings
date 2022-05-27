@@ -29,8 +29,5 @@
     <Setting Name="Control4ViewRegionName" Type="System.String" Scope="User">
       <Value Profile="(Default)">AnimatedContentControl.Control4View</Value>
     </Setting>
-    <Setting Name="PrimaryRegionName" Type="System.String" Scope="User">
-      <Value Profile="(Default)">AnimatedContentControl.PrimaryRegion</Value>
-    </Setting>
   </Settings>
 </SettingsFile>

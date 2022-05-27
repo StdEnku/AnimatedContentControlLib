@@ -130,17 +130,5 @@ namespace Demo.Properties {
                 this["Control4ViewRegionName"] = value;
             }
         }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("AnimatedContentControl.PrimaryRegion")]
-        public string PrimaryRegionName {
-            get {
-                return ((string)(this["PrimaryRegionName"]));
-            }
-            set {
-                this["PrimaryRegionName"] = value;
-            }
-        }
     }
 }
