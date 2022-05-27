@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AnimatedContentControlLib.Core.Messengers;
 
-public interface IAnimationMessangerTarget
+public interface IAnimationNameMessangerTarget
 {
     string? AnimationNameMessangerKey { get; set; }
 

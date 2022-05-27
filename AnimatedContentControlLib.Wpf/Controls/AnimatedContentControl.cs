@@ -7,7 +7,7 @@ using Messangers = AnimatedContentControlLib.Core.Messengers;
 
 namespace AnimatedContentControlLib.Wpf.Controls;
 
-public class AnimatedContentControl : ContentControl, Messangers.IAnimationMessangerTarget
+public class AnimatedContentControl : ContentControl, Messangers.IAnimationNameMessangerTarget
 {
     #region 定数
     private const string IMAGE_IN_TEMPLATE_NAME = "SecondaryImage";

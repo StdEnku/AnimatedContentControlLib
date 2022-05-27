@@ -8,12 +8,12 @@ namespace AnimatedContentControlLib.Core.Messengers;
 
 public static class AnimationNameMessanger
 {
-    private static List<WeakReference<IAnimationMessangerTarget>> s_targets = new();
+    private static List<WeakReference<IAnimationNameMessangerTarget>> s_targets = new();
     private static object s_lock = new();
 
-    public static void RegisterTarget(IAnimationMessangerTarget target)
+    public static void RegisterTarget(IAnimationNameMessangerTarget target)
     {
-        var weakTarget = new WeakReference<IAnimationMessangerTarget>(target);
+        var weakTarget = new WeakReference<IAnimationNameMessangerTarget>(target);
 
         lock (s_lock)
         {
@@ -27,7 +27,7 @@ public static class AnimationNameMessanger
     {
         lock (s_lock)
         {
-            IAnimationMessangerTarget? currentTarget;
+            IAnimationNameMessangerTarget? currentTarget;
 
             foreach (var current in s_targets)
             {
@@ -43,7 +43,7 @@ public static class AnimationNameMessanger
     {
         lock (s_lock)
         {
-            IAnimationMessangerTarget? currentTarget;
+            IAnimationNameMessangerTarget? currentTarget;
 
             var targets = s_targets.FindAll(currentWeakTarget => 
             {
