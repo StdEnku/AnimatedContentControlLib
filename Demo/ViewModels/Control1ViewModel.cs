@@ -13,8 +13,10 @@ internal class Control1ViewModel : ViewModelBase
 
     public override void OnNavigatedFrom(NavigationContext navigationContext)
     {
+        var messangerKey = Config.Default.PrimaryContentMessangerKey;
+
         Messangers.AnimationNameMessanger.SetAnimationName(
-            "PrimaryContent.AnimationMessageKey", 
+            messangerKey, 
             Constants.EmbededAnimations.SlideinLeft);
     }
 }

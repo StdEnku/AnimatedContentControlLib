@@ -142,5 +142,29 @@ namespace Demo.Properties {
                 this["Control5ViewRegionName"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("PrimaryContentRegionName")]
+        public string PrimaryContentRegionName {
+            get {
+                return ((string)(this["PrimaryContentRegionName"]));
+            }
+            set {
+                this["PrimaryContentRegionName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("PrimaryContentMessangerKey")]
+        public string PrimaryContentMessangerKey {
+            get {
+                return ((string)(this["PrimaryContentMessangerKey"]));
+            }
+            set {
+                this["PrimaryContentMessangerKey"] = value;
+            }
+        }
     }
 }

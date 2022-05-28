@@ -109,7 +109,7 @@
 
         <!--下記メインコンテンツ-->
         <acl:AnimatedContentControl Grid.Row="1" 
-                                    AnimationNameMessangerKey="PrimaryContent.AnimationMessageKey"
-                                    prism:RegionManager.RegionName="PrimaryContent"/>
+                                    AnimationNameMessangerKey="{Binding Source={x:Static config:Settings.Default}, Path=PrimaryContentMessangerKey}"
+                                    prism:RegionManager.RegionName="{Binding Source={x:Static config:Settings.Default}, Path=PrimaryContentRegionName}"/>
     </Grid>
 </Window>

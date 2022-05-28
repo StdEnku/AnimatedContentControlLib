@@ -1,6 +1,7 @@
 ﻿using Prism.Mvvm;
 using Prism.Commands;
 using Prism.Regions;
+using Config = Demo.Properties.Settings;
 
 namespace Demo.ViewModels;
 
@@ -15,7 +16,7 @@ internal class ViewModelBase : BindableBase, INavigationAware, IRegionMemberLife
 
     public DelegateCommand<string> NavigateCmd => new((nextViewName) => 
     {
-        this._regionManager.RequestNavigate("PrimaryContent", nextViewName);
+        this._regionManager.RequestNavigate(Config.Default.PrimaryContentRegionName, nextViewName);
     });
 
     public bool KeepAlive => false;
