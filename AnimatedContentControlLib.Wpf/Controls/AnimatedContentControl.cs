@@ -144,21 +144,35 @@ public class AnimatedContentControl : ContentControl, Messangers.IAnimationNameM
     #endregion
 
     #region IAnimationMessangerTargetの実装
-    private string? _animationNameMessangerKey = null;
+    /// <summary>
+    /// AnimationNameMessangerからのメッセージを
+    /// 自分宛かどうか識別するためのキー文字列を表す依存関係プロパティ
+    /// </summary>
+    public static readonly DependencyProperty AnimationNameMessangerKeyProperty
+        = DependencyProperty.Register(
+            "AnimationNameMessangerKey",
+            typeof(string),
+            typeof(AnimatedContentControl),
+            new PropertyMetadata(null, onAnimationNameMessangerKeyChanged)
+        );
 
     /// <summary>
-    /// AnimationNameMessangerで自身を特定するためのキー文字列
+    /// AnimationNameMessangerKeyProperty依存関係プロパティに対応するClrプロパティ
     /// </summary>
     public string? AnimationNameMessangerKey
-    { 
-        get => this._animationNameMessangerKey; 
-        set
+    {
+        get => (string?)this.GetValue(AnimationNameMessangerKeyProperty);
+        set => this.SetValue(AnimationNameMessangerKeyProperty, value);
+    }
+
+    private static void onAnimationNameMessangerKeyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+    {
+        var animatedContentControl = (AnimatedContentControl)d;
+        var newValue = e.NewValue as string;
+
+        if (newValue is not null)
         {
-            this._animationNameMessangerKey = value;
-            if (value is not null)
-            {
-                Messangers.AnimationNameMessanger.RegisterTarget(this);
-            }
+            Messangers.AnimationNameMessanger.RegisterTarget(animatedContentControl);
         }
     }
 
