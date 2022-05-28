@@ -12,7 +12,7 @@
     <RepositoryType>git</RepositoryType>
     <Description>Assembly that provides built-in animation name constants and AnimationNameMessanger that can be used in WPF-independent ViewModel</Description>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-	<Version>2.0.0</Version>
+	<Version>2.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
