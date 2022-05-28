@@ -12,10 +12,10 @@ This library provides AnimatedContentControl controls that can be used with WPF.
 
 This library consists of two assemblies.
 
-| assembly names                 | remarks                                                      |
-| ------------------------------ | ------------------------------------------------------------ |
-| AnimatedContentControlLib.Core | Assembly that provides built-in animation name constants and AnimationNameMessanger that can be used in WPF-independent ViewModel |
-| AnimatedContentControlLib.Wpf  | Assembly that provides the AnimatedContentControl body       |
+|                            Nuget                             |         assembly names         |                           remarks                            |
+| :----------------------------------------------------------: | :----------------------------: | :----------------------------------------------------------: |
+| ![Nuget](https://img.shields.io/nuget/dt/AnimatedContentControlLib.Core?logo=nuget&style=social) | AnimatedContentControlLib.Core | Assembly that provides built-in animation name<br />constants and AnimationNameMessanger <br />that can be used in WPF-independent ViewModel |
+| ![Nuget](https://img.shields.io/nuget/dt/AnimatedContentControlLib.Wpf?logo=nuget&style=social) | AnimatedContentControlLib.Wpf  |    Assembly that provides the AnimatedContentControl body    |
 
 ## Installation
 

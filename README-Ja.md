@@ -9,10 +9,10 @@
 WPFで使用可能なAnimatedContentControlコントロールを提供するライブラリである。
 
 本ライブラリは二つのアセンブリから構成されている。
-| アセンブリ名                   | 備考                                                         |
-| ------------------------------ | ------------------------------------------------------------ |
-| AnimatedContentControlLib.Core | WPFに依存しないViewModelで使用可能な組み込みアニメーション名の定数やAnimationNameMessangerを提供するアセンブリ |
-| AnimatedContentControlLib.Wpf  | AnimatedContentControl本体を提供するアセンブリ               |
+|                            Nuget                             | アセンブリ名                   | 備考                                                         |
+| :----------------------------------------------------------: | ------------------------------ | ------------------------------------------------------------ |
+| ![Nuget](https://img.shields.io/nuget/dt/AnimatedContentControlLib.Core?logo=nuget&style=social) | AnimatedContentControlLib.Core | WPFに依存しないViewModelで使用可能な<br />組み込みアニメーション名の定数や<br />AnimationNameMessangerを提供するアセンブリ |
+| ![Nuget](https://img.shields.io/nuget/dt/AnimatedContentControlLib.Wpf?logo=nuget&style=social) | AnimatedContentControlLib.Wpf  | AnimatedContentControl本体を提供するアセンブリ               |
 
 ## インストール方法
 
