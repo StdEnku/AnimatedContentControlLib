@@ -10,7 +10,7 @@
 
 |                            Nuget                             |           assembly names           |                           remarks                            |
 | :----------------------------------------------------------: | :--------------------------------: | :----------------------------------------------------------: |
-| ![Nuget](https://img.shields.io/nuget/dt/AnimatedContentControlLib.Core?logo=nuget&style=social) | AnimatedContentControlLib.AnimKeys | WPFに依存しないViewModelで使用可能な<br/>組み込みアニメーション名の定数<br/>を提供するアセンブリ |
+|                                                              | AnimatedContentControlLib.AnimKeys | WPFに依存しないViewModelで使用可能な<br/>組み込みアニメーション名の定数<br/>を提供するアセンブリ |
 | ![Nuget](https://img.shields.io/nuget/dt/AnimatedContentControlLib.Wpf?logo=nuget&style=social) |   AnimatedContentControlLib.Wpf    |        AnimatedContentControl本体を提供するアセンブリ        |
 
 ### どちらのアセンブリをインストールすれば良いのか?
