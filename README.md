@@ -1,16 +1,12 @@
 # ![Header](./Img/Header.png)
 
-[日本語版README.md](https://github.com/StdEnku/AnimatedContentControlLib/blob/main/README-Ja.md)
-
 [![Build&Test](https://github.com/StdEnku/AnimatedContentControlLib/actions/workflows/Build&Test.yml/badge.svg)](https://github.com/StdEnku/AnimatedContentControlLib/actions/workflows/Build&Test.yml) <img src="https://img.shields.io/badge/6-Dot%20net-5C2D91.svg?logo=dot-net&style=popout"> <img src="https://img.shields.io/badge/-MIT%20License-666666.svg?logo=&style=popout-square">
 
-## Summary
+## 概要
 
-This library enables the execution of home-made animations and built-in standard animations when the Content property is changed.
-This library provides an AnimatedContentControl control that can be used with WPF.
-This library provides AnimatedContentControl controls that can be used with WPF.
+本ライブラリはContentプロパティ変更時に自作したアニメーションや 組み込まれた標準のアニメーションを実行可能な WPFで使用可能なAnimatedContentControlコントロールを提供するライブラリである。
 
-This library consists of two assemblies.
+本ライブラリは二つのアセンブリから構成されている
 
 |                            Nuget                             |         assembly names         |                           remarks                            |
 | :----------------------------------------------------------: | :----------------------------: | :----------------------------------------------------------: |
