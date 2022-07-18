@@ -3,13 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimatedContentControlLib.Core", "AnimatedContentControlLib.Core\AnimatedContentControlLib.Core.csproj", "{7047AD67-EEFC-42EA-9F59-810B7557BA3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimatedContentControlLib.BuiltInAnimKeys", "AnimatedContentControlLib.AnimKeys\AnimatedContentControlLib.BuiltInAnimKeys.csproj", "{0804ECCC-B2D4-4283-90BA-E734F321FB0C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimatedContentControlLib.Wpf", "AnimatedContentControlLib.Wpf\AnimatedContentControlLib.Wpf.csproj", "{E6A392D3-20FD-412A-AF9B-B92347F2FB12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimatedContentControlLib.Wpf", "AnimatedContentControlLib.Wpf\AnimatedContentControlLib.Wpf.csproj", "{9C7AAB82-F2BC-4668-8AEB-E4F65CE62FB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo.csproj", "{44979068-7390-456A-B25B-80373EC9827A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCore", "TestCore\TestCore.csproj", "{4C3CFB26-88BB-44CD-BBC9-60A4DB8CF4B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo", "Demo\Demo.csproj", "{EB3C619C-F77A-4EC9-991C-470ABDF0D3CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,22 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7047AD67-EEFC-42EA-9F59-810B7557BA3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7047AD67-EEFC-42EA-9F59-810B7557BA3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7047AD67-EEFC-42EA-9F59-810B7557BA3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7047AD67-EEFC-42EA-9F59-810B7557BA3B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E6A392D3-20FD-412A-AF9B-B92347F2FB12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E6A392D3-20FD-412A-AF9B-B92347F2FB12}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E6A392D3-20FD-412A-AF9B-B92347F2FB12}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E6A392D3-20FD-412A-AF9B-B92347F2FB12}.Release|Any CPU.Build.0 = Release|Any CPU
-		{44979068-7390-456A-B25B-80373EC9827A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{44979068-7390-456A-B25B-80373EC9827A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{44979068-7390-456A-B25B-80373EC9827A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{44979068-7390-456A-B25B-80373EC9827A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4C3CFB26-88BB-44CD-BBC9-60A4DB8CF4B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4C3CFB26-88BB-44CD-BBC9-60A4DB8CF4B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4C3CFB26-88BB-44CD-BBC9-60A4DB8CF4B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4C3CFB26-88BB-44CD-BBC9-60A4DB8CF4B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0804ECCC-B2D4-4283-90BA-E734F321FB0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0804ECCC-B2D4-4283-90BA-E734F321FB0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0804ECCC-B2D4-4283-90BA-E734F321FB0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0804ECCC-B2D4-4283-90BA-E734F321FB0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C7AAB82-F2BC-4668-8AEB-E4F65CE62FB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C7AAB82-F2BC-4668-8AEB-E4F65CE62FB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C7AAB82-F2BC-4668-8AEB-E4F65CE62FB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C7AAB82-F2BC-4668-8AEB-E4F65CE62FB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB3C619C-F77A-4EC9-991C-470ABDF0D3CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB3C619C-F77A-4EC9-991C-470ABDF0D3CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB3C619C-F77A-4EC9-991C-470ABDF0D3CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB3C619C-F77A-4EC9-991C-470ABDF0D3CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

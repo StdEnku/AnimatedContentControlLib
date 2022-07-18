@@ -2,22 +2,25 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
-    <Page Update="ResourceDictionarys\AnimatedContentControl\ModernSlideinAnimations.xaml">
+    <Page Update="BuiltInAnimations\MechanicalAnimations.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="ResourceDictionarys\AnimatedContentControl\SlideinAnimations.xaml">
+    <Page Update="BuiltInAnimations\ModernSlideinAnimations.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\AnimatedContentControl\MobileImageStyles.xaml">
+    <Page Update="BuiltInAnimations\OpacityAnimations.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="BuiltInAnimations\RotateAnimations.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="BuiltInAnimations\SlideinAnimations.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\AnimatedContentControlStyle.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Themes\Generic.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Themes\AnimatedContentControl\AnimatedContentControlStyles.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Themes\AnimatedContentControl\MobileContentPresenterStyles.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

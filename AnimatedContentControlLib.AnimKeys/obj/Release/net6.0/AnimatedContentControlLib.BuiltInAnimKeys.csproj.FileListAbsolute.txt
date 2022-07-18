@@ -1,0 +1,12 @@
+C:\Users\Syple\デスクトップ\AnimatedContentControlLib\AnimatedContentControlLib.AnimKeys\bin\Release\net6.0\AnimatedContentControlLib.BuiltInAnimKeys.deps.json
+C:\Users\Syple\デスクトップ\AnimatedContentControlLib\AnimatedContentControlLib.AnimKeys\bin\Release\net6.0\AnimatedContentControlLib.BuiltInAnimKeys.dll
+C:\Users\Syple\デスクトップ\AnimatedContentControlLib\AnimatedContentControlLib.AnimKeys\bin\Release\net6.0\AnimatedContentControlLib.BuiltInAnimKeys.pdb
+C:\Users\Syple\デスクトップ\AnimatedContentControlLib\AnimatedContentControlLib.AnimKeys\obj\Release\net6.0\AnimatedContentControlLib.BuiltInAnimKeys.csproj.AssemblyReference.cache
+C:\Users\Syple\デスクトップ\AnimatedContentControlLib\AnimatedContentControlLib.AnimKeys\obj\Release\net6.0\AnimatedContentControlLib.BuiltInAnimKeys.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Syple\デスクトップ\AnimatedContentControlLib\AnimatedContentControlLib.AnimKeys\obj\Release\net6.0\AnimatedContentControlLib.BuiltInAnimKeys.AssemblyInfoInputs.cache
+C:\Users\Syple\デスクトップ\AnimatedContentControlLib\AnimatedContentControlLib.AnimKeys\obj\Release\net6.0\AnimatedContentControlLib.BuiltInAnimKeys.AssemblyInfo.cs
+C:\Users\Syple\デスクトップ\AnimatedContentControlLib\AnimatedContentControlLib.AnimKeys\obj\Release\net6.0\AnimatedContentControlLib.BuiltInAnimKeys.csproj.CoreCompileInputs.cache
+C:\Users\Syple\デスクトップ\AnimatedContentControlLib\AnimatedContentControlLib.AnimKeys\obj\Release\net6.0\AnimatedContentControlLib.BuiltInAnimKeys.dll
+C:\Users\Syple\デスクトップ\AnimatedContentControlLib\AnimatedContentControlLib.AnimKeys\obj\Release\net6.0\refint\AnimatedContentControlLib.BuiltInAnimKeys.dll
+C:\Users\Syple\デスクトップ\AnimatedContentControlLib\AnimatedContentControlLib.AnimKeys\obj\Release\net6.0\AnimatedContentControlLib.BuiltInAnimKeys.pdb
+C:\Users\Syple\デスクトップ\AnimatedContentControlLib\AnimatedContentControlLib.AnimKeys\obj\Release\net6.0\ref\AnimatedContentControlLib.BuiltInAnimKeys.dll

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>AnimatedContentControlLib.BuiltInAnimKeys</id>
+    <version>1.0.0</version>
+    <authors>AnimatedContentControlLib.BuiltInAnimKeys</authors>
+    <projectUrl>https://github.com/StdEnku/AnimatedContentControlLib</projectUrl>
+    <description>WPF assembly independent assembly with defined built-in animation names to be used in combination with AnimatedContentControlLib.Wpf</description>
+    <copyright>© 2022 StdEnku</copyright>
+    <dependencies>
+      <group targetFramework="net6.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\Syple\デスクトップ\AnimatedContentControlLib\AnimatedContentControlLib.AnimKeys\bin\Debug\net6.0\AnimatedContentControlLib.BuiltInAnimKeys.dll" target="lib\net6.0\AnimatedContentControlLib.BuiltInAnimKeys.dll" />
+  </files>
+</package>

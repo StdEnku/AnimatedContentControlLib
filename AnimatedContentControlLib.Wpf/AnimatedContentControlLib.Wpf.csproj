@@ -4,13 +4,16 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/StdEnku/AnimatedContentControlLib</PackageProjectUrl>
     <Copyright>© 2022 StdEnku</Copyright>
     <Description>Library that provides AnimatedContentControl that can perform animation when the Content property is changed.</Description>
     <PackageIcon>Logo.png</PackageIcon>
+    <RepositoryUrl>https://github.com/StdEnku/AnimatedContentControlLib</RepositoryUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-	<Version>2.0.1</Version>
+    <PackageTags>WPF;</PackageTags>
+    <AssemblyVersion>3.0.0</AssemblyVersion>
+    <Version>3.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -25,7 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AnimatedContentControlLib.Core\AnimatedContentControlLib.Core.csproj" />
+    <ProjectReference Include="..\AnimatedContentControlLib.AnimKeys\AnimatedContentControlLib.BuiltInAnimKeys.csproj" />
   </ItemGroup>
 
 </Project>

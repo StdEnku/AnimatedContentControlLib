@@ -1,115 +1,66 @@
 ﻿<Window x:Class="Demo.Views.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:sys="clr-namespace:System;assembly=netstandard"
-        xmlns:prism="http://prismlibrary.com/"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        xmlns:acl="http://AnimatedContentControlLib/Wpf/"
-        xmlns:config="clr-namespace:Demo.Properties"
         xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
-        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-        Background="{DynamicResource MaterialDesignPaper}"
-        TextElement.FontWeight="Medium"
-        TextElement.FontSize="14"
-        FontFamily="{materialDesign:MaterialDesignFont}"
+        xmlns:prism="http://prismlibrary.com/"
+        xmlns:acl="http://AnimatedContentControlLib/Wpf/"
+        xmlns:aclKeys="clr-namespace:AnimatedContentControlLib.BuiltInAnimKeys;assembly=AnimatedContentControlLib.BuiltInAnimKeys"
         prism:ViewModelLocator.AutoWireViewModel="True"
-        StateChanged="onWindowStateChanged"
-        Loaded="onWindowLoaded"
-        Closing="onWindowClosing"
-        SizeChanged="onWindowSizeChanged"
-        LocationChanged="onWindowLocationChanged"
-        Title="Demo" >
-
-    <!--#region リソース-->
-    <Window.Resources>
-        <sys:Double x:Key="TitlebarHeight">50</sys:Double>
-    </Window.Resources>
-    <!--#endregion-->
-
-    <!--#region WindowChromeの設定-->
-    <WindowChrome.WindowChrome>
-        <WindowChrome ResizeBorderThickness="10,0,10,10"
-                      CaptionHeight="{StaticResource TitlebarHeight}"
-                      UseAeroCaptionButtons="False"/>
-    </WindowChrome.WindowChrome>
-    <!--#endregion-->
+        Title="{Binding Title}" Height="350" Width="525" >
 
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
-            <i:InvokeCommandAction Command="{Binding NavigateCmd}" CommandParameter="{Binding Source={x:Static config:Settings.Default}, Path=Control1ViewRegionName}" />
+            <i:InvokeCommandAction Command="{Binding NavigationCommand}" />
         </i:EventTrigger>
     </i:Interaction.Triggers>
 
+    <Window.Resources>
+        <Storyboard x:Key="CustomAnim">
+            
+        </Storyboard>
+    </Window.Resources>
+
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
             <RowDefinition />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
+        
+        <acl:AnimatedContentControl Grid.Row="0" 
+                                    Name="AnimatedContentRegion"
+                                    prism:RegionManager.RegionName="ContentRegion"
+                                    
+                                    NextBuiltInAnimKey="{Binding ElementName=AnimationSetter, Path=SelectedValue}" />
 
-        <!--#region Windowが最大化されると端が埋まる不具合への対策-->
-        <Grid.Style>
-            <Style TargetType="Grid">
-                <Style.Triggers>
-                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}, Path=WindowState}"  Value="Maximized">
-                        <Setter Property="Margin" Value="10" />
-                    </DataTrigger>
+        <ComboBox Grid.Row="1" 
+                  SelectedIndex="0"
+                  Name="AnimationSetter"
+                  Margin="5"
+                  SelectedValuePath="Tag">
+            <ComboBoxItem Tag="{x:Null}" Content="Null" />
+            <ComboBoxItem Tag="{x:Static aclKeys:AnimKeys.ModernSlideinToLeft}" Content="ModernSlideinToLeft" />
+            <ComboBoxItem Tag="{x:Static aclKeys:AnimKeys.ModernSlideinToRight}" Content="ModernSlideinToRight" />
+            <ComboBoxItem Tag="{x:Static aclKeys:AnimKeys.ModernSlideinToUp}" Content="ModernSlideinToUp" />
+            <ComboBoxItem Tag="{x:Static aclKeys:AnimKeys.ModernSlideinToDown}" Content="ModernSlideinToDown" />
 
-                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}, Path=WindowState}"  Value="Nornal">
-                        <Setter Property="Margin" Value="0" />
-                    </DataTrigger>
-                </Style.Triggers>
-            </Style>
-        </Grid.Style>
-        <!--#endregion-->
+            <ComboBoxItem Tag="{x:Static aclKeys:AnimKeys.SlideinToLeft}" Content="SlideinToLeft" />
+            <ComboBoxItem Tag="{x:Static aclKeys:AnimKeys.SlideinToRight}" Content="SlideinToRight" />
+            <ComboBoxItem Tag="{x:Static aclKeys:AnimKeys.SlideinToUp}" Content="SlideinToUp" />
+            <ComboBoxItem Tag="{x:Static aclKeys:AnimKeys.SlideinToDown}" Content="SlideinToDown" />
 
-        <!--#region タイトルバー-->
-        <Grid Grid.Row="0" Height="{StaticResource TitlebarHeight}" 
-              Background="{StaticResource PrimaryHueMidBrush}">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition />
-                <ColumnDefinition Width="Auto" />
-            </Grid.ColumnDefinitions>
+            <ComboBoxItem Tag="{x:Static aclKeys:AnimKeys.OpacityInOrder}" Content="OpacityInOrder" />
+            <ComboBoxItem Tag="{x:Static aclKeys:AnimKeys.OpacityNewContent}" Content="OpacityNewContent" />
+            <ComboBoxItem Tag="{x:Static aclKeys:AnimKeys.OpacitySameTime}" Content="OpacitySameTime" />
 
-            <Label Content="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}, Path=Title}" 
-                   FontSize="20"
-                   Grid.ColumnSpan="3"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"/>
+            <ComboBoxItem Tag="{x:Static aclKeys:AnimKeys.MechanicalRight}" Content="MechanicalRight" />
+            <ComboBoxItem Tag="{x:Static aclKeys:AnimKeys.MechanicalLeft}" Content="MechanicalLeft" />
 
-            <StackPanel Orientation="Horizontal" 
-                        Grid.Column="2" 
-                        HorizontalAlignment="Right"
-                        VerticalAlignment="Center">
+            <ComboBoxItem Tag="{x:Static aclKeys:AnimKeys.RotateBigToSmoleToBig}" Content="RotateBigToSmoleToBig" />
+        </ComboBox>
 
-                <StackPanel.Resources>
-                    <Style TargetType="Button"
-                           BasedOn="{StaticResource MaterialDesignFlatButton}">
-                        <Setter Property="HorizontalAlignment" Value="Center" />
-                        <Setter Property="VerticalAlignment" Value="Center" />
-                        <Setter Property="Height" Value="{StaticResource TitlebarHeight}" />
-                        <Setter Property="Width" Value="40" />
-                        <Setter Property="Padding" Value="-5,0" />
-                        <Setter Property="Foreground" Value="{DynamicResource MaterialDesignDarkForeground}" />
-                        <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
-                    </Style>
-                </StackPanel.Resources>
-
-                <Button Content="{materialDesign:PackIcon Kind=WindowMinimize, Size=25}"
-                        Click="onMinimizeButtonClicked" />
-
-                <Button Name="MaximizeOrRestoreButton"
-                        Click="onMaximizeOrRestoreButtonClicked" />
-
-                <Button Content="{materialDesign:PackIcon Kind=Power, Size=25}"
-                        Click="onPowerButtonClicked" />
-            </StackPanel>
-        </Grid>
-        <!--#endregion-->
-
-        <!--下記メインコンテンツ-->
-        <acl:AnimatedContentControl Grid.Row="1" 
-                                    AnimationNameMessangerKey="{Binding Source={x:Static config:Settings.Default}, Path=PrimaryContentMessangerKey}"
-                                    prism:RegionManager.RegionName="{Binding Source={x:Static config:Settings.Default}, Path=PrimaryContentRegionName}"/>
+        <Button Content="Navigation" Grid.Row="2" Margin="5"
+                IsHitTestVisible="{Binding ElementName=AnimatedContentRegion, Path=IsAnimCompleted}" 
+                Command="{Binding NavigationCommand}" />
     </Grid>
 </Window>

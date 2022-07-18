@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>AnimatedContentControlLib.Wpf</id>
+    <version>1.0.0</version>
+    <authors>AnimatedContentControlLib.Wpf</authors>
+    <icon>Logo.png</icon>
+    <readme>README.md</readme>
+    <projectUrl>https://github.com/StdEnku/AnimatedContentControlLib</projectUrl>
+    <description>Library that provides AnimatedContentControl that can perform animation when the Content property is changed.</description>
+    <copyright>© 2022 StdEnku</copyright>
+    <tags>WPF</tags>
+    <repository url="https://github.com/StdEnku/AnimatedContentControlLib" />
+    <dependencies>
+      <group targetFramework="net6.0-windows7.0">
+        <dependency id="AnimatedContentControlLib.BuiltInAnimKeys" version="1.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net6.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WPF" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="C:\Users\Syple\デスクトップ\AnimatedContentControlLib\AnimatedContentControlLib.Wpf\bin\Release\net6.0-windows\AnimatedContentControlLib.Wpf.dll" target="lib\net6.0-windows7.0\AnimatedContentControlLib.Wpf.dll" />
+    <file src="C:\Users\Syple\デスクトップ\AnimatedContentControlLib\Img\Logo.png" target="\Logo.png" />
+    <file src="C:\Users\Syple\デスクトップ\AnimatedContentControlLib\README.md" target="\README.md" />
+  </files>
+</package>
