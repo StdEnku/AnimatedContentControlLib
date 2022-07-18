@@ -8,13 +8,13 @@
 
 本ライブラリは二つのアセンブリから構成されている
 
-|                            Nuget                             |           assembly names           |                           remarks                            |
-| :----------------------------------------------------------: | :--------------------------------: | :----------------------------------------------------------: |
-|                                                              | AnimatedContentControlLib.AnimKeys | WPFに依存しないViewModelで使用可能な<br/>組み込みアニメーション名の定数<br/>を提供するアセンブリ |
-| ![Nuget](https://img.shields.io/nuget/dt/AnimatedContentControlLib.Wpf?logo=nuget&style=social) |   AnimatedContentControlLib.Wpf    |        AnimatedContentControl本体を提供するアセンブリ        |
+|                            Nuget                             |              assembly names               |                           remarks                            |
+| :----------------------------------------------------------: | :---------------------------------------: | :----------------------------------------------------------: |
+| ![Nuget](https://img.shields.io/nuget/dt/AnimatedContentControlLib.BuiltInAnimKeys?logo=nuget&style=social) | AnimatedContentControlLib.BuiltInAnimKeys | WPFに依存しないViewModelで使用可能な<br/>組み込みアニメーション名の定数<br/>を提供するアセンブリ |
+| ![Nuget](https://img.shields.io/nuget/dt/AnimatedContentControlLib.Wpf?logo=nuget&style=social) |       AnimatedContentControlLib.Wpf       |        AnimatedContentControl本体を提供するアセンブリ        |
 
 ### どちらのアセンブリをインストールすれば良いのか?
 
-ViewとViewModelを同一のプロジェクトで管理する場合AnimatedContentControlLib.Wpfのみの インストールでよい。 AnimatedContentControlLib.WpfはAnimatedContentControlLib.AnimKeysに依存しているので AnimatedContentControlLib.WpfのインストールのみでAnimatedContentControlLib.Coreも付いてくる。
+ViewとViewModelを同一のプロジェクトで管理する場合AnimatedContentControlLib.Wpfのみの インストールでよい。 AnimatedContentControlLib.WpfはAnimatedContentControlLib.BuiltInAnimKeysに依存しているので AnimatedContentControlLib.WpfのインストールのみでAnimatedContentControlLib.BuiltInAnimKeysも付いてくる。
 
-しかし、ViewとViewModelが別プロジェクトの場合 View側のプロジェクトにAnimatedContentControlLib.Wpfをインストールし、 ViewModel側のプロジェクトにAnimatedContentControlLib.AnimKeysをインストールすれば良い。
+しかし、ViewとViewModelが別プロジェクトの場合 View側のプロジェクトにAnimatedContentControlLib.Wpfをインストールし、 ViewModel側のプロジェクトにAnimatedContentControlLib.BuiltInAnimKeysをインストールすれば良い。
