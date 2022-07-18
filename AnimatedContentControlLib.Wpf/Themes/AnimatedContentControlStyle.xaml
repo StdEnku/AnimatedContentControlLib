@@ -1,0 +1,33 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:controls="clr-namespace:AnimatedContentControlLib.Wpf.Controls"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style TargetType="controls:AnimatedContentControl">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="controls:AnimatedContentControl">
+                    <Grid Name="RootPanel" ClipToBounds="True">
+                        <Grid.Resources>
+                            <ResourceDictionary>
+                                <ResourceDictionary.MergedDictionaries>
+                                    <ResourceDictionary Source="pack://application:,,,/AnimatedContentControlLib.Wpf;component/BuiltInAnimations/SlideinAnimations.xaml" />
+                                    <ResourceDictionary Source="pack://application:,,,/AnimatedContentControlLib.Wpf;component/BuiltInAnimations/ModernSlideinAnimations.xaml" />
+                                    <ResourceDictionary Source="pack://application:,,,/AnimatedContentControlLib.Wpf;component/BuiltInAnimations/OpacityAnimations.xaml" />
+                                    <ResourceDictionary Source="pack://application:,,,/AnimatedContentControlLib.Wpf;component/BuiltInAnimations/MechanicalAnimations.xaml" />
+                                    <ResourceDictionary Source="pack://application:,,,/AnimatedContentControlLib.Wpf;component/BuiltInAnimations/RotateAnimations.xaml" />
+                                </ResourceDictionary.MergedDictionaries>
+                            </ResourceDictionary>
+                        </Grid.Resources>
+                        
+                        <controls:TransformContentControl x:Name="ContentTransform" Panel.ZIndex="1">
+                            <ContentPresenter />
+                        </controls:TransformContentControl>
+                        <controls:TransformContentControl x:Name="ImageTransform" Visibility="Hidden" Panel.ZIndex="0">
+                            <Image Name="OldContentImage" />
+                        </controls:TransformContentControl>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

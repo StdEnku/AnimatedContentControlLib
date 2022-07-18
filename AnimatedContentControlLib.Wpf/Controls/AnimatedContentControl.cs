@@ -1,234 +1,154 @@
 ﻿using System;
-using System.Windows;
 using System.Windows.Controls;
+using System.Windows;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
-using Messangers = AnimatedContentControlLib.Core.Messengers;
+using AnimatedContentControlLib.BuiltInAnimKeys;
 
 namespace AnimatedContentControlLib.Wpf.Controls;
 
 /// <summary>
-/// Contentプロパティが変化した際指定したアニメーションを実行可能なコントロール
+/// Contentプロパティ変更時にアニメーションを実行するためのContentControl
 /// </summary>
-public class AnimatedContentControl : ContentControl, Messangers.IAnimationNameMessangerTarget
+public class AnimatedContentControl : ContentControl
 {
-    #region 定数
-    private const string IMAGE_IN_TEMPLATE_NAME = "SecondaryImage";
-    private const string GRID_IN_TEMPLATE_NAME = "RootPanel";
-    #endregion
-
-    #region プロパティ
+    #region DPI指定用CLRプロパティ
     /// <summary>
-    /// テンプレート内のSubImageで使用するX方向のDpi
+    /// テンプレート内のSubImageで使用するX方向のDpiプロパティ
     /// </summary>
     public double DpiX { get; set; } = 96.0;
 
     /// <summary>
-    /// テンプレート内のSubImageで使用するY方向のDpi
+    /// テンプレート内のSubImageで使用するY方向のDpiプロパティ
     /// </summary>
     public double DpiY { get; set; } = 96.0;
     #endregion
 
-    #region CurrentStoryboardKey依存関係プロパティ
-    /// <summary>
-    /// 次回Contentプロパティが変化した際実行される
-    /// アニメーション名用依存関係プロパティ
-    /// </summary>
-    public static readonly DependencyProperty CurrentStoryboardKeyProperty
-        = DependencyProperty.Register(
-            "CurrentStoryboardKey",
-            typeof(string),
-            typeof(AnimatedContentControl),
-            new PropertyMetadata(null)
-        );
-
-    /// <summary>
-    /// CurrentStoryboardKeyProperty依存関係プロパティに対応するClrプロパティ
-    /// </summary>
-    public string? CurrentStoryboardKey
-    {
-        get => (string?)this.GetValue(CurrentStoryboardKeyProperty);
-        set => this.SetValue(CurrentStoryboardKeyProperty, value);
-    }
-    #endregion
-
-    #region EmbededStoryboards依存関係プロパティ
-    internal static readonly DependencyProperty EmbededStoryboardsProperty
-        = DependencyProperty.Register(
-            "EmbededStoryboards",
-            typeof(StoryBoardList),
-            typeof(AnimatedContentControl),
-            new PropertyMetadata(new StoryBoardList())
-        );
-    
-
-    internal StoryBoardList EmbededStoryboards
-    {
-        get => (StoryBoardList)this.GetValue(EmbededStoryboardsProperty);
-        set => this.SetValue(EmbededStoryboardsProperty, value);
-    }
-    #endregion
-
-    #region Storyboards依存関係プロパティ
-    /// <summary>
-    /// 自作アニメーションを登録するためのStoryboardのリスト
-    /// </summary>
-    public static readonly DependencyProperty StoryboardsProperty
-        = DependencyProperty.Register(
-            "Storyboards",
-            typeof(StoryBoardList),
-            typeof(AnimatedContentControl),
-            new PropertyMetadata(new StoryBoardList())
-        );
-
-    /// <summary>
-    /// StoryboardsProperty依存関係プロパティに対応するClrプロパティ
-    /// </summary>
-    public StoryBoardList Storyboards
-    {
-        get => (StoryBoardList)this.GetValue(StoryboardsProperty);
-        set => this.SetValue(StoryboardsProperty, value);
-    }
-    #endregion
-
-    #region IsAnimationCompleted依存関係プロパティ
+    #region Contentプロパティ変更時のアニメーションが実行中かどうかを表す依存関係プロパティ
     /// <summary>
     /// アニメーションが終了しているかどうかを示す依存関係プロパティ
     /// </summary>
-    public static readonly DependencyProperty IsAnimationCompletedProperty
+    public static readonly DependencyProperty IsAnimCompletedProperty
         = DependencyProperty.Register(
-            "IsAnimationCompleted",
+            "IsAnimCompleted",
             typeof(bool),
             typeof(AnimatedContentControl),
             new PropertyMetadata(true)
         );
 
     /// <summary>
-    /// IsAnimationCompletedProperty依存関係プロパティに対応するClrプロパティ
+    /// IsAnimCompletedPropertyに対応するCLRプロパティ
     /// </summary>
-    public bool IsAnimationCompleted
+    public bool IsAnimCompleted
     {
-        get => (bool)this.GetValue(IsAnimationCompletedProperty);
-        private set => this.SetValue(IsAnimationCompletedProperty, value);
+        get => (bool)this.GetValue(IsAnimCompletedProperty);
+        private set => this.SetValue(IsAnimCompletedProperty, value);
     }
     #endregion
 
-    #region 添付プロパティ
+    #region 実行するStoryboardのKeyを指定するための依存関係プロパティ
     /// <summary>
-    /// Storyboards依存関係プロパティ内のStoryboardに添付して
-    /// CurrentStoryboardKeyで特定できるようにするための添付プロパティ
+    /// リソースに登録されたStoryboardから次のContentプロパティ変更時に実行する
+    /// StoryboardのKeyを指定するための依存関係プロパティ
     /// </summary>
-    public static readonly DependencyProperty KeyProperty
-        = DependencyProperty.RegisterAttached(
-            "Key",
+    public static readonly DependencyProperty NextAnimKeyProperty
+        = DependencyProperty.Register(
+            "NextAnimKey",
             typeof(string),
             typeof(AnimatedContentControl),
             new PropertyMetadata(null)
         );
 
     /// <summary>
-    /// KeyProperty添付プロパティのセッター
+    /// NextAnimKeyPropertyに対応するCLRプロパティ
     /// </summary>
-    /// <param name="obj">Key添付プロパティが添付されたDependencyObject</param>
-    /// <param name="value">キー文字列</param>
-    public static void SetKey(DependencyObject obj, string value)
-        => obj.SetValue(KeyProperty, value);
-
-    /// <summary>
-    /// KeyProperty添付プロパティのゲッター
-    /// </summary>
-    /// <param name="obj">Key添付プロパティが添付されたDependencyObject</param>
-    /// <returns>キー文字列</returns>
-    public static string GetKey(DependencyObject obj)
-        => (string)obj.GetValue(KeyProperty);
+    public string? NextAnimKey
+    {
+        get => (string?)this.GetValue(NextAnimKeyProperty);
+        set => this.SetValue(NextAnimKeyProperty, value); 
+    }
     #endregion
 
-    #region IAnimationMessangerTargetの実装
+    #region 利用する組み込みアニメーションを指定するための依存関係プロパティ
     /// <summary>
-    /// AnimationNameMessangerからのメッセージを
-    /// 自分宛かどうか識別するためのキー文字列を表す依存関係プロパティ
+    /// 画面遷移時に組み込みアニメーションを使用する際に
+    /// 利用する組み込みアニメーションを指定するための依存関係プロパティ
+    /// nullをセットするとアニメーションは行われない
     /// </summary>
-    public static readonly DependencyProperty AnimationNameMessangerKeyProperty
+    public static readonly DependencyProperty NextBuiltInAnimKeyProperty
         = DependencyProperty.Register(
-            "AnimationNameMessangerKey",
-            typeof(string),
+            "NextBuiltInAnimKey",
+            typeof(AnimKeys?),
             typeof(AnimatedContentControl),
-            new PropertyMetadata(null, onAnimationNameMessangerKeyChanged)
+            new PropertyMetadata(null)
         );
 
     /// <summary>
-    /// AnimationNameMessangerKeyProperty依存関係プロパティに対応するClrプロパティ
+    /// NextBuiltInAnimKeyPropertyに対応するCLRプロパティ
     /// </summary>
-    public string? AnimationNameMessangerKey
+    public AnimKeys? NextBuiltInAnimKey
     {
-        get => (string?)this.GetValue(AnimationNameMessangerKeyProperty);
-        set => this.SetValue(AnimationNameMessangerKeyProperty, value);
-    }
-
-    private static void onAnimationNameMessangerKeyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-    {
-        var animatedContentControl = (AnimatedContentControl)d;
-        var newValue = e.NewValue as string;
-
-        if (newValue is not null)
-        {
-            Messangers.AnimationNameMessanger.RegisterTarget(animatedContentControl);
-        }
-    }
-
-    /// <summary>
-    /// メッセージが届いた際実行されるメソッド
-    /// </summary>
-    /// <param name="nextAnimationName"></param>
-    public void AnimationMessageReceive(string? nextAnimationName)
-    {
-        this.CurrentStoryboardKey = nextAnimationName;
+        get => (AnimKeys?)this.GetValue(NextBuiltInAnimKeyProperty);
+        set => this.SetValue(NextBuiltInAnimKeyProperty, value);
     }
     #endregion
 
-    static AnimatedContentControl()
-    {
-        DefaultStyleKeyProperty.OverrideMetadata(
-            typeof(AnimatedContentControl), 
-            new FrameworkPropertyMetadata(typeof(AnimatedContentControl))
-        );
-    }
-
+    #region Contentプロパティが変化した際実行されるメソッド
+    /// <summary>
+    /// Contentプロパティ変更時実行されるメソッド
+    /// </summary>
+    /// <param name="oldContent">古いContent値</param>
+    /// <param name="newContent">新しいContent値</param>
     protected override void OnContentChanged(object oldContent, object newContent)
     {
         base.OnContentChanged(oldContent, newContent);
 
-        if (oldContent == newContent) return;
-        if (oldContent is null) return;
-
-        var storyboard = this.Storyboards.Find(x => GetKey(x) == this.CurrentStoryboardKey);
-        storyboard ??= this.EmbededStoryboards.Find(x => GetKey(x) == this.CurrentStoryboardKey);
-        if (storyboard is null) return;
-
-        var rootPanel = (Grid)this.Template.FindName(GRID_IN_TEMPLATE_NAME, this);
-        var secondaryImage = (Image)this.Template.FindName(IMAGE_IN_TEMPLATE_NAME, this);
-        var completedEvent = (EventHandler?)null;
-        secondaryImage.Source = this.createOldContentBitmap((FrameworkElement)oldContent);
-
-        completedEvent = (sender, e) =>
+        if (oldContent is FrameworkElement oldFrameworkElement)
         {
-            secondaryImage.Visibility = Visibility.Hidden;
-            this.IsAnimationCompleted = true;
-            storyboard.Completed -= completedEvent;
-        };
+            //下記古いContentをビットマップ化してテンプレート内のOldContentImageで表示する処理
+            var oldContentImage = (Image)this.Template.FindName("OldContentImage", this);
+            var oldBitmap = new RenderTargetBitmap((int)oldFrameworkElement.ActualWidth,
+                                                   (int)oldFrameworkElement.ActualHeight,
+                                                   this.DpiX, this.DpiY, PixelFormats.Pbgra32);
+            oldBitmap.Render(oldFrameworkElement);
+            oldContentImage.Source = oldBitmap;
 
-        storyboard.Completed += completedEvent;
-        secondaryImage.Visibility = Visibility.Visible;
-        this.IsAnimationCompleted = false;
-        storyboard.Begin(rootPanel);
+            //下記アニメーションの検索と実行
+            var rootPanel = (Grid)this.Template.FindName("RootPanel", this);
+            Storyboard? nextStoryboard = this.NextAnimKey is not null ? this.FindResource(this.NextAnimKey) as Storyboard :
+                                         this.NextBuiltInAnimKey is not null ? rootPanel.FindResource(this.NextBuiltInAnimKey.ToString()) as Storyboard :
+                                         null;
+
+            if (nextStoryboard is not null)
+            {
+                
+                var imageTransform = (TransformContentControl)this.Template.FindName("ImageTransform", this);
+
+                EventHandler? completedEvent = null;
+                completedEvent = (sender, e) =>
+                {
+                    imageTransform.Visibility = Visibility.Hidden;
+                    this.IsAnimCompleted = true;
+                    nextStoryboard.Completed -= completedEvent;
+                };
+
+                nextStoryboard.Completed += completedEvent;
+                imageTransform.Visibility = Visibility.Visible;
+                this.IsAnimCompleted = false;
+                nextStoryboard.Begin(rootPanel);
+            }
+        }
     }
+    #endregion
 
-    private RenderTargetBitmap createOldContentBitmap(FrameworkElement oldContent)
+    #region カスタムコントロールのStyleを読み込むための静的コンストラクタ
+    /// <summary>
+    /// カスタムコントロールのStyleを読み込むための静的コンストラクタ
+    /// </summary>
+    static AnimatedContentControl()
     {
-        var resultBitmap = new RenderTargetBitmap((int)oldContent.ActualWidth,
-                                                  (int)oldContent.ActualHeight,
-                                                  this.DpiX, this.DpiY, PixelFormats.Pbgra32);
-        resultBitmap.Render(oldContent);
-        return resultBitmap;
+        DefaultStyleKeyProperty.OverrideMetadata(typeof(AnimatedContentControl), new FrameworkPropertyMetadata(typeof(AnimatedContentControl)));
     }
+    #endregion
 }

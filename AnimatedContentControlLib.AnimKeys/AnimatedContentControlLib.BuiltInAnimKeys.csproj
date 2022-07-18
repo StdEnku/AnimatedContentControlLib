@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Copyright>© 2022 StdEnku</Copyright>
+    <Description>WPF assembly independent assembly with defined built-in animation names to be used in combination with AnimatedContentControlLib.Wpf</Description>
+    <PackageProjectUrl>https://github.com/StdEnku/AnimatedContentControlLib</PackageProjectUrl>
+  </PropertyGroup>
+
+</Project>
