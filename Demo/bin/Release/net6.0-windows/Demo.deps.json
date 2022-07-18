@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "Demo/1.0.0": {
         "dependencies": {
-          "AnimatedContentControlLib.Wpf": "1.0.0",
+          "AnimatedContentControlLib.Wpf": "3.0.0",
           "Prism.DryIoc": "8.1.97"
         },
         "runtime": {
@@ -128,14 +128,14 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "AnimatedContentControlLib.BuiltInAnimKeys/1.0.0": {
+      "AnimatedContentControlLib.BuiltInAnimKeys/0.0.0": {
         "runtime": {
           "AnimatedContentControlLib.BuiltInAnimKeys.dll": {}
         }
       },
-      "AnimatedContentControlLib.Wpf/1.0.0": {
+      "AnimatedContentControlLib.Wpf/3.0.0": {
         "dependencies": {
-          "AnimatedContentControlLib.BuiltInAnimKeys": "1.0.0"
+          "AnimatedContentControlLib.BuiltInAnimKeys": "0.0.0"
         },
         "runtime": {
           "AnimatedContentControlLib.Wpf.dll": {}
@@ -254,12 +254,12 @@
       "path": "system.threading.tasks/4.3.0",
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
     },
-    "AnimatedContentControlLib.BuiltInAnimKeys/1.0.0": {
+    "AnimatedContentControlLib.BuiltInAnimKeys/0.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "AnimatedContentControlLib.Wpf/1.0.0": {
+    "AnimatedContentControlLib.Wpf/3.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
