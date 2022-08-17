@@ -68,3 +68,4 @@ C:\Users\Syple\デスクトップ\AnimatedContentControlLib\Demo\obj\Debug\net6.
 C:\Users\Syple\デスクトップ\AnimatedContentControlLib\Demo\obj\Debug\net6.0-windows\Demo.csproj.CopyComplete
 C:\Users\Syple\デスクトップ\AnimatedContentControlLib\Demo\obj\Debug\net6.0-windows\Demo.genruntimeconfig.cache
 C:\Users\Syple\デスクトップ\AnimatedContentControlLib\Demo\obj\Debug\net6.0-windows\ref\Demo.dll
+C:\Users\Syple\デスクトップ\AnimatedContentControlLib\Demo\obj\Debug\net6.0-windows\Demo_Content.g.cs

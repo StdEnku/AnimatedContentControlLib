@@ -1,12 +1,12 @@
-﻿using System;
+﻿namespace AnimatedContentControlLib.Wpf.Controls;
+
+using System;
 using System.Windows.Controls;
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using AnimatedContentControlLib.BuiltInAnimKeys;
-
-namespace AnimatedContentControlLib.Wpf.Controls;
 
 /// <summary>
 /// Contentプロパティ変更時にアニメーションを実行するためのContentControl

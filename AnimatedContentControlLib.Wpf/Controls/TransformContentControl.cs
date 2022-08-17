@@ -1,10 +1,10 @@
-﻿using System;
+﻿namespace AnimatedContentControlLib.Wpf.Controls;
+
+using System;
 using System.Windows.Controls;
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Effects;
-
-namespace AnimatedContentControlLib.Wpf.Controls;
 
 /// <summary>
 /// 0~1までの値で位置変更,回転,サイズ変更を可能にするためのContentControl

@@ -1,5 +1,5 @@
 ﻿AnimatedContentControlLib.Wpf
-
+3.0.0
 
 library
 C#
@@ -13,7 +13,7 @@ TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 7112703730
 
 31719952131
-195-1021513841
+1951065094033
 BuiltInAnimations\MechanicalAnimations.xaml;BuiltInAnimations\ModernSlideinAnimations.xaml;BuiltInAnimations\OpacityAnimations.xaml;BuiltInAnimations\RotateAnimations.xaml;BuiltInAnimations\SlideinAnimations.xaml;Themes\AnimatedContentControlStyle.xaml;Themes\Generic.xaml;
 
 False
