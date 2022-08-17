@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oRUGouuQhcx6EuFRnlKVtpQxitudTws1JBcExKXtU3yjcpobsp1oKHttQZoyHZOyuHs+/fHmI0y9r9g88WUBTA==",
+  "dgSpecHash": "JvO0dOtIeWJva5+A1d/+uv//zGvH1L5v1cEHHxKBTk5X+aL+WyauMfAt3kwbPj+lQ7g2/2QNPQn/kV4GRQ9ghw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Syple\\デスクトップ\\AnimatedContentControlLib\\AnimatedContentControlLib.Wpf\\AnimatedContentControlLib.Wpf.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Syple\\.nuget\\packages\\animatedcontentcontrollib.builtinanimkeys\\0.0.0\\animatedcontentcontrollib.builtinanimkeys.0.0.0.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

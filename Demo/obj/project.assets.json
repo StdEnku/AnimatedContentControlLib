@@ -219,7 +219,7 @@
           }
         }
       },
-      "AnimatedContentControlLib.BuiltInAnimKeys/0.0.0": {
+      "AnimatedContentControlLib.BuiltInAnimKeys/0.0.1": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
@@ -229,11 +229,11 @@
           "bin/placeholder/AnimatedContentControlLib.BuiltInAnimKeys.dll": {}
         }
       },
-      "AnimatedContentControlLib.Wpf/3.0.0": {
+      "AnimatedContentControlLib.Wpf/3.0.1": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "AnimatedContentControlLib.BuiltInAnimKeys": "0.0.0"
+          "AnimatedContentControlLib.BuiltInAnimKeys": "0.0.1"
         },
         "compile": {
           "bin/placeholder/AnimatedContentControlLib.Wpf.dll": {}
@@ -949,12 +949,12 @@
         "system.threading.tasks.nuspec"
       ]
     },
-    "AnimatedContentControlLib.BuiltInAnimKeys/0.0.0": {
+    "AnimatedContentControlLib.BuiltInAnimKeys/0.0.1": {
       "type": "project",
       "path": "../AnimatedContentControlLib.AnimKeys/AnimatedContentControlLib.BuiltInAnimKeys.csproj",
       "msbuildProject": "../AnimatedContentControlLib.AnimKeys/AnimatedContentControlLib.BuiltInAnimKeys.csproj"
     },
-    "AnimatedContentControlLib.Wpf/3.0.0": {
+    "AnimatedContentControlLib.Wpf/3.0.1": {
       "type": "project",
       "path": "../AnimatedContentControlLib.Wpf/AnimatedContentControlLib.Wpf.csproj",
       "msbuildProject": "../AnimatedContentControlLib.Wpf/AnimatedContentControlLib.Wpf.csproj"
@@ -962,7 +962,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
-      "AnimatedContentControlLib.Wpf >= 3.0.0",
+      "AnimatedContentControlLib.Wpf >= 3.0.1",
       "Prism.DryIoc >= 8.1.97"
     ]
   },
