@@ -2,6 +2,8 @@
 
 <img src="https://img.shields.io/badge/6-Dot%20net-5C2D91.svg?logo=dot-net&style=popout"> <img src="https://img.shields.io/badge/-MIT%20License-666666.svg?logo=&style=popout-square">
 
+[Nuget](https://www.nuget.org/packages/AnimatedContentControlLib.Wpf/)
+
 ## 概要
 
 本ライブラリはPrismのRegionで使用する事を想定して作成された
