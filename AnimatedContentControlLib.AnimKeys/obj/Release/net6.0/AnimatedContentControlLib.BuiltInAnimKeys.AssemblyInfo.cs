@@ -16,11 +16,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCopyrightAttribute("© 2022 StdEnku")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("WPF assembly independent assembly with defined built-in animation names to be use" +
     "d in combination with AnimatedContentControlLib.Wpf")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("0.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.0.0")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("0.0.1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.0.1")]
 [assembly: System.Reflection.AssemblyProductAttribute("AnimatedContentControlLib.BuiltInAnimKeys")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AnimatedContentControlLib.BuiltInAnimKeys")]
-[assembly: System.Reflection.AssemblyVersionAttribute("0.0.0.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("0.0.1.0")]
 
 // MSBuild WriteCodeFragment クラスによって生成されました。
 

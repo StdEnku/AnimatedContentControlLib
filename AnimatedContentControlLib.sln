@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimatedContentControlLib.B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimatedContentControlLib.Wpf", "AnimatedContentControlLib.Wpf\AnimatedContentControlLib.Wpf.csproj", "{9C7AAB82-F2BC-4668-8AEB-E4F65CE62FB2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo", "Demo\Demo.csproj", "{EB3C619C-F77A-4EC9-991C-470ABDF0D3CB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimatedContentControlLib.Demo", "AnimatedContentControlLib.Demo\AnimatedContentControlLib.Demo.csproj", "{6A5880C3-462D-48B7-9168-B32C42AEC20A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{9C7AAB82-F2BC-4668-8AEB-E4F65CE62FB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C7AAB82-F2BC-4668-8AEB-E4F65CE62FB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C7AAB82-F2BC-4668-8AEB-E4F65CE62FB2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EB3C619C-F77A-4EC9-991C-470ABDF0D3CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EB3C619C-F77A-4EC9-991C-470ABDF0D3CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EB3C619C-F77A-4EC9-991C-470ABDF0D3CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EB3C619C-F77A-4EC9-991C-470ABDF0D3CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A5880C3-462D-48B7-9168-B32C42AEC20A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A5880C3-462D-48B7-9168-B32C42AEC20A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A5880C3-462D-48B7-9168-B32C42AEC20A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A5880C3-462D-48B7-9168-B32C42AEC20A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

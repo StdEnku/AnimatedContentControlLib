@@ -1,0 +1,42 @@
+﻿<Window x:Class="AnimatedContentControlLib.Demo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AnimatedContentControlLib.Demo"
+        xmlns:acl="http://AnimatedContentControlLib/Wpf/"
+        xmlns:aclKeys="clr-namespace:AnimatedContentControlLib.BuiltInAnimKeys;assembly=AnimatedContentControlLib.BuiltInAnimKeys"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        Title="MainWindow" Height="450" Width="800">
+
+    <DockPanel LastChildFill="True">
+        <DockPanel DockPanel.Dock="Bottom">
+            <Button Content="Navigate" Click="NavigateButton_Click" Name="NavigateButton" DockPanel.Dock="Right" Margin="5" />
+
+            <ComboBox Name="AnimSelector" SelectedIndex="0" SelectedValuePath="Tag" DockPanel.Dock="Left" Margin="5">
+                <ComboBoxItem Tag="{x:Null}" Content="Null" />
+                <ComboBoxItem Tag="{x:Static aclKeys:AnimKeys.ModernSlideinToLeft}" Content="ModernSlideinToLeft" />
+                <ComboBoxItem Tag="{x:Static aclKeys:AnimKeys.ModernSlideinToRight}" Content="ModernSlideinToRight" />
+                <ComboBoxItem Tag="{x:Static aclKeys:AnimKeys.ModernSlideinToUp}" Content="ModernSlideinToUp" />
+                <ComboBoxItem Tag="{x:Static aclKeys:AnimKeys.ModernSlideinToDown}" Content="ModernSlideinToDown" />
+
+                <ComboBoxItem Tag="{x:Static aclKeys:AnimKeys.SlideinToLeft}" Content="SlideinToLeft" />
+                <ComboBoxItem Tag="{x:Static aclKeys:AnimKeys.SlideinToRight}" Content="SlideinToRight" />
+                <ComboBoxItem Tag="{x:Static aclKeys:AnimKeys.SlideinToUp}" Content="SlideinToUp" />
+                <ComboBoxItem Tag="{x:Static aclKeys:AnimKeys.SlideinToDown}" Content="SlideinToDown" />
+
+                <ComboBoxItem Tag="{x:Static aclKeys:AnimKeys.OpacityInOrder}" Content="OpacityInOrder" />
+                <ComboBoxItem Tag="{x:Static aclKeys:AnimKeys.OpacityNewContent}" Content="OpacityNewContent" />
+                <ComboBoxItem Tag="{x:Static aclKeys:AnimKeys.OpacitySameTime}" Content="OpacitySameTime" />
+
+                <ComboBoxItem Tag="{x:Static aclKeys:AnimKeys.MechanicalRight}" Content="MechanicalRight" />
+                <ComboBoxItem Tag="{x:Static aclKeys:AnimKeys.MechanicalLeft}" Content="MechanicalLeft" />
+
+                <ComboBoxItem Tag="{x:Static aclKeys:AnimKeys.RotateBigToSmoleToBig}" Content="RotateBigToSmoleToBig" />
+            </ComboBox>
+        </DockPanel>
+        
+        <acl:AnimatedContentControl Name="MainContent" NextBuiltInAnimKey="{Binding ElementName=AnimSelector, Path=SelectedValue}" DockPanel.Dock="Top" Margin="5" />
+    </DockPanel>
+</Window>
