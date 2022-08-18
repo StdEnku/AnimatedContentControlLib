@@ -6,13 +6,15 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Copyright>© 2022 StdEnku</Copyright>
-    <Description>WPF assembly independent assembly with defined built-in animation names to be used in combination with AnimatedContentControlLib.Wpf</Description>
+    <Description>WPFに依存しないViewModelで使用可能な組み込みアニメーション名の定数を提供するアセンブリ</Description>
     <PackageProjectUrl>https://github.com/StdEnku/AnimatedContentControlLib</PackageProjectUrl>
     <PackageIcon>Logo.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <AssemblyVersion></AssemblyVersion>
-    <Version>0.0.1</Version>
+    <Version>0.0.2</Version>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <RepositoryUrl>https://github.com/StdEnku/AnimatedContentControlLib</RepositoryUrl>
+    <PackageTags>WPF;TrasitionEffect;</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

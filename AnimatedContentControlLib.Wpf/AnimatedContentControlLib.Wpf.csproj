@@ -7,13 +7,13 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/StdEnku/AnimatedContentControlLib</PackageProjectUrl>
     <Copyright>© 2022 StdEnku</Copyright>
-    <Description>Library that provides AnimatedContentControl that can perform animation when the Content property is changed.</Description>
+    <Description>ContentProperty変化時にアニメーションを実行できるAnimatedContentControl本体を提供するライブラリ</Description>
     <PackageIcon>Logo.png</PackageIcon>
     <RepositoryUrl>https://github.com/StdEnku/AnimatedContentControlLib</RepositoryUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageTags>WPF;</PackageTags>
+    <PackageTags>WPF;TransigionEffect;</PackageTags>
     <AssemblyVersion>3.0.0</AssemblyVersion>
-    <Version>3.0.1</Version>
+    <Version>3.0.2</Version>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 

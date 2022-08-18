@@ -14,13 +14,13 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AnimatedContentControlLib.BuiltInAnimKeys")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute("© 2022 StdEnku")]
-[assembly: System.Reflection.AssemblyDescriptionAttribute("WPF assembly independent assembly with defined built-in animation names to be use" +
-    "d in combination with AnimatedContentControlLib.Wpf")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("0.0.1.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.0.1")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("WPFに依存しないViewModelで使用可能な組み込みアニメーション名の定数を提供するアセンブリ")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("0.0.2.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.0.2")]
 [assembly: System.Reflection.AssemblyProductAttribute("AnimatedContentControlLib.BuiltInAnimKeys")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AnimatedContentControlLib.BuiltInAnimKeys")]
-[assembly: System.Reflection.AssemblyVersionAttribute("0.0.1.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("0.0.2.0")]
+[assembly: System.Reflection.AssemblyMetadataAttribute("RepositoryUrl", "https://github.com/StdEnku/AnimatedContentControlLib")]
 
 // MSBuild WriteCodeFragment クラスによって生成されました。
 

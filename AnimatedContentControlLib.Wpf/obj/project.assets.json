@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net6.0-windows7.0": {
-      "AnimatedContentControlLib.BuiltInAnimKeys/0.0.1": {
+      "AnimatedContentControlLib.BuiltInAnimKeys/0.0.2": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
@@ -15,7 +15,7 @@
     }
   },
   "libraries": {
-    "AnimatedContentControlLib.BuiltInAnimKeys/0.0.1": {
+    "AnimatedContentControlLib.BuiltInAnimKeys/0.0.2": {
       "type": "project",
       "path": "../AnimatedContentControlLib.AnimKeys/AnimatedContentControlLib.BuiltInAnimKeys.csproj",
       "msbuildProject": "../AnimatedContentControlLib.AnimKeys/AnimatedContentControlLib.BuiltInAnimKeys.csproj"
@@ -23,7 +23,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
-      "AnimatedContentControlLib.BuiltInAnimKeys >= 0.0.1"
+      "AnimatedContentControlLib.BuiltInAnimKeys >= 0.0.2"
     ]
   },
   "packageFolders": {
@@ -31,7 +31,7 @@
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "3.0.1",
+    "version": "3.0.2",
     "restore": {
       "projectUniqueName": "C:\\Users\\Syple\\デスクトップ\\AnimatedContentControlLib\\AnimatedContentControlLib.Wpf\\AnimatedContentControlLib.Wpf.csproj",
       "projectName": "AnimatedContentControlLib.Wpf",
