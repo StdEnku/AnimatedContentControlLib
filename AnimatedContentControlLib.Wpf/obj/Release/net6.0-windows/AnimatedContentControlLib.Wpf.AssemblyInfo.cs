@@ -14,10 +14,9 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AnimatedContentControlLib.Wpf")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute("© 2022 StdEnku")]
-[assembly: System.Reflection.AssemblyDescriptionAttribute("Library that provides AnimatedContentControl that can perform animation when the " +
-    "Content property is changed.")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("ContentProperty変化時にアニメーションを実行できるAnimatedContentControl本体を提供するライブラリ")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("3.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("3.0.1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("3.0.3")]
 [assembly: System.Reflection.AssemblyProductAttribute("AnimatedContentControlLib.Wpf")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AnimatedContentControlLib.Wpf")]
 [assembly: System.Reflection.AssemblyVersionAttribute("3.0.0")]

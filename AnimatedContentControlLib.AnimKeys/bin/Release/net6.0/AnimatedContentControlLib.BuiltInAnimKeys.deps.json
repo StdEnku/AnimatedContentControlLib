@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "AnimatedContentControlLib.BuiltInAnimKeys/0.0.1": {
+      "AnimatedContentControlLib.BuiltInAnimKeys/0.0.2": {
         "runtime": {
           "AnimatedContentControlLib.BuiltInAnimKeys.dll": {}
         }
@@ -14,7 +14,7 @@
     }
   },
   "libraries": {
-    "AnimatedContentControlLib.BuiltInAnimKeys/0.0.1": {
+    "AnimatedContentControlLib.BuiltInAnimKeys/0.0.2": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "AnimatedContentControlLib.Wpf/3.0.1": {
+      "AnimatedContentControlLib.Wpf/3.0.3": {
         "dependencies": {
-          "AnimatedContentControlLib.BuiltInAnimKeys": "0.0.1"
+          "AnimatedContentControlLib.BuiltInAnimKeys": "0.0.2"
         },
         "runtime": {
           "AnimatedContentControlLib.Wpf.dll": {}
         }
       },
-      "AnimatedContentControlLib.BuiltInAnimKeys/0.0.1": {
+      "AnimatedContentControlLib.BuiltInAnimKeys/0.0.2": {
         "runtime": {
           "AnimatedContentControlLib.BuiltInAnimKeys.dll": {}
         }
@@ -22,12 +22,12 @@
     }
   },
   "libraries": {
-    "AnimatedContentControlLib.Wpf/3.0.1": {
+    "AnimatedContentControlLib.Wpf/3.0.3": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "AnimatedContentControlLib.BuiltInAnimKeys/0.0.1": {
+    "AnimatedContentControlLib.BuiltInAnimKeys/0.0.2": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

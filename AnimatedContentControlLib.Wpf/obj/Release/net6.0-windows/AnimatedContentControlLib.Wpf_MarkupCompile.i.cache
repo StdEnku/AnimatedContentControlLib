@@ -16,5 +16,5 @@ TRACE;RELEASE;NET;NET6_0;NETCOREAPP
 195-1468113766
 BuiltInAnimations\MechanicalAnimations.xaml;BuiltInAnimations\ModernSlideinAnimations.xaml;BuiltInAnimations\OpacityAnimations.xaml;BuiltInAnimations\RotateAnimations.xaml;BuiltInAnimations\SlideinAnimations.xaml;Themes\AnimatedContentControlStyle.xaml;Themes\Generic.xaml;
 
-True
+False
 
