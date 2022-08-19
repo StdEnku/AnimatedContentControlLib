@@ -7,6 +7,8 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using AnimatedContentControlLib.BuiltInAnimKeys;
+using System.Diagnostics;
+using System.Windows.Input;
 
 /// <summary>
 /// Contentプロパティ変更時にアニメーションを実行するためのContentControl
@@ -149,6 +151,81 @@ public class AnimatedContentControl : ContentControl
     static AnimatedContentControl()
     {
         DefaultStyleKeyProperty.OverrideMetadata(typeof(AnimatedContentControl), new FrameworkPropertyMetadata(typeof(AnimatedContentControl)));
+    }
+    #endregion
+
+    #region コンストラクタ
+    /// <summary>
+    /// デフォルトコンストラクタ
+    /// </summary>
+    public AnimatedContentControl()
+    {
+        this.Loaded += this.onLoaded;
+    }
+    #endregion
+
+    #region Loadedイベント時の処理
+    private void onLoaded(object sender, RoutedEventArgs e)
+    {
+        // ContentプロパティがNullでInitCommandがNullではない場合InitCommand実行
+        var isInitCommandExists = this.InitCommand is not null;
+        var isContentNull = this.Content is null;
+        if (isInitCommandExists && isContentNull)
+        {
+            Debug.Assert(this.InitCommand is not null);
+
+            //コマンドの実行が可能ならば実行
+            var canExecute = this.InitCommand.CanExecute(this.InitCommandParameter);
+            if (canExecute)
+            {
+                this.InitCommand.Execute(this.InitCommandParameter);
+            }
+        }
+    }
+    #endregion
+
+    #region Loadedイベント発生時にContentプロパティがNullならば実行されるコマンド用依存関係プロパティ
+    /// <summary>
+    /// Loadedイベント発生時にContentプロパティがNullならば実行されるコマンド用依存関係プロパティ
+    /// 画面遷移用コマンドをバインドすることを想定している。
+    /// </summary>
+    public static readonly DependencyProperty InitCommandProperty
+        = DependencyProperty.Register(
+            "InitCommand",
+            typeof(ICommand),
+            typeof(AnimatedContentControl),
+            new PropertyMetadata(null)
+        );
+
+    /// <summary>
+    /// InitCommandProperty用CLRプロパティ
+    /// </summary>
+    public ICommand? InitCommand
+    {
+        get => (ICommand)this.GetValue(InitCommandProperty);
+        set => this.SetValue(InitCommandProperty, value);
+    }
+    #endregion
+
+    #region InitCommand用のコマンドパラメータ用依存関係プロパティ
+    /// <summary>
+    /// InitCommand用のコマンドパラメータ用依存関係プロパティ
+    /// </summary>
+    public static readonly DependencyProperty InitCommandParameterProperty
+        = DependencyProperty.Register(
+            "InitCommandParameter",
+            typeof(object),
+            typeof(AnimatedContentControl),
+            new PropertyMetadata(null)
+        );
+
+    /// <summary>
+    /// InitCommandParameterProperty用のCLRプロパティ
+    /// </summary>
+    public object? InitCommandParameter
+    {
+        get => this.GetValue(InitCommandParameterProperty);
+        set => this.SetValue(InitCommandParameterProperty, value);
     }
     #endregion
 }
