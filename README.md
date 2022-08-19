@@ -231,13 +231,15 @@ public partial class MainWindow : Window
 
 ### AnimatedContentControlのプロパティ
 
-| プロパティ名       | 型                                                 | 備考                                                         | 規定値 |
-| ------------------ | -------------------------------------------------- | ------------------------------------------------------------ | ------ |
-| DpiX               | double                                             | テンプレート内のSubImageで使用するX方向のDpiプロパティ       | 96     |
-| DpiY               | double                                             | テンプレート内のSubImageで使用するY方向のDpiプロパティ       | 96     |
-| IsAnimCompleted    | bool                                               | IsAnimCompletedPropertyに対応するCLRプロパティ               | true   |
-| NextAnimKey        | string                                             | リソースに登録されたStoryboardから次のContentプロパティ変更時に実行するStoryboardのKeyを指定するための依存関係プロパティ | null   |
-| NextBuiltInAnimKey | AnimatedContentControlLib.BuiltInAnimKeys.AnimKeys | 画面遷移時に組み込みアニメーションを使用する際に利用する組み込みアニメーションを指定するための依存関係プロパティ。nullをセットするとアニメーションは行われない | null   |
+| プロパティ名         | 型                                                 | 備考                                                         | 規定値 |
+| -------------------- | -------------------------------------------------- | ------------------------------------------------------------ | ------ |
+| DpiX                 | double                                             | テンプレート内のSubImageで使用するX方向のDpiプロパティ       | 96     |
+| DpiY                 | double                                             | テンプレート内のSubImageで使用するY方向のDpiプロパティ       | 96     |
+| IsAnimCompleted      | bool                                               | IsAnimCompletedPropertyに対応するCLRプロパティ               | true   |
+| NextAnimKey          | string                                             | リソースに登録されたStoryboardから次のContentプロパティ変更時に実行するStoryboardのKeyを指定するための依存関係プロパティ | null   |
+| NextBuiltInAnimKey   | AnimatedContentControlLib.BuiltInAnimKeys.AnimKeys | 画面遷移時に組み込みアニメーションを使用する際に利用する組み込みアニメーションを指定するための依存関係プロパティ。nullをセットするとアニメーションは行われない | null   |
+| InitCommand          | ICommand                                           | Loadedイベント発生時にContentプロパティがNullならば実行されるコマンド用依存関係プロパティ。画面遷移用コマンドをバインドすることを想定している。 | null   |
+| InitCommandParameter | object                                             | InitCommand用のコマンドパラメータ用依存関係プロパティ        | null   |
 
 ### TransformContentControlのプロパティ
 
